@@ -1,0 +1,14 @@
+Name: <lcyan><b>工具商店</b></lcyan>
+Description:
+- <gray>所有类型的工具。</gray>
+Permission_Required: false
+Layout:
+  Name: default
+Citizens:
+  Attached_NPC: ''
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Pages: 1
+Icon:
+  Material: DIAMOND_PICKAXE

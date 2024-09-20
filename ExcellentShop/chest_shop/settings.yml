@@ -1,0 +1,399 @@
+Shops:
+  # 设置是否自动删除无法正确加载的无效商店。
+  Delete_Invalid_Shop_Configs: false
+  # 设置管理员商店的自定义店主名称。
+  AdminShop_Name: "管理员商店"
+  # 默认商店名称，将在创建商店时使用。
+  Default_Name: "商店"
+  # 设置商店名称的最大可能长度。
+  # 有助于防止玩家为他们商店设置过长的名字。
+  Max_Name_Length: 12
+  # 设置默认的ChestShop货币。它将用于新商品以及在没有其他货币可用时。
+  # 以及用于商店创建/删除的价格。
+  Default_Currency: "vault"
+  # 设置默认的商品购买菜单配置。
+  # 您可以在/menu/product_carts/目录中创建和编辑购物车UI。
+  Default_Cart_UI: "default"
+  # 可用于Chest Shop商品的货币列表。
+  Allowed_Currencies:
+  - "vault"
+  # 可用于商店创建的材料列表。
+  # 只能使用'容器'方块材料!
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/Container.html
+  Allowed_Containers:
+  - "pink_shulker_box"
+  - "red_shulker_box"
+  - "black_shulker_box"
+  - "blue_shulker_box"
+  - "lime_shulker_box"
+  - "light_gray_shulker_box"
+  - "purple_shulker_box"
+  - "white_shulker_box"
+  - "green_shulker_box"
+  - "barrel"
+  - "chest"
+  - "gray_shulker_box"
+  - "cyan_shulker_box"
+  - "light_blue_shulker_box"
+  - "shulker_box"
+  - "brown_shulker_box"
+  - "orange_shulker_box"
+  - "yellow_shulker_box"
+  - "magenta_shulker_box"
+  - "trapped_chest"
+  # 设置玩家的商店银行是否会自动管理，无需手动操作。
+  # 这意味着玩家将即时获得/损失他们的资金，用于他们商店的每笔交易。
+  Auto_Bank: true
+  # 设置插件是否会在玩家离线时直接从/向商店店主的账户存取货币。
+  #
+  # 为什么？即使启用了'Auto_Bank'选项，玩家也无法向离线店主的商店出售商品
+  # 除非商店银行有足够的资金。
+  # 此设置将解决绕过该问题。
+  #
+  # [*] 此功能可能会影响性能（取决于货币插件及其离线玩家数据处理）。
+  # [*] 此功能对某些货币不可用。
+  OfflineTransactions: false
+  InfiniteStorage:
+    # 设置是否启用无限存储系统。
+    # 无限存储允许您在商店中存放尽可能多的商品，不使用方块库存。
+    Enabled: false
+  Product:
+    InitialPrice:
+      # 设置新添加到商店中的商品初始购买价格。
+      Buy: 10.0
+      # 设置新添加到商店中的商品初始销售价格。
+      Sell: 2.0
+  ItemCreation:
+    # 设置玩家是否可以通过放置特定物品来创建商店。
+    Enabled: false
+    # 分配自定义商店创建物品与特定容器类型。
+    # 当放置这些物品时，它们会变成分配的容器，并在其上创建商店：
+    # -- 物品：
+    # ---- <container_type>: # 见 'Allowed_Containers'
+    # ------ <item settings> # https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+    Items:
+      pink_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: a374cf299874af600608acfb55169237fda244ccca0e23aa08c2e335bd73406b
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>pink_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      black_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: bf6174c01a67e1eada9db16bb551ddee32dfcbf37611382f88cdb1e62895bab2
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>black_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      red_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: 324aa7bf056ccd3d4e63197b04d89f0e9ba79fa6049c503029521724e234054a
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>red_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      blue_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: 47d0d86e1f1108468ac150dafa28e7d0619a6e3066cb42994bc6c1866bd267e3
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>blue_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      light_gray_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: 56a48c4037343731bd5fd1510ca15c573788389f258677a17f014e08aeaa9560
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>light_gray_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      lime_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: f45cf042172c9e4e7c8eea570ac8bbd76dc7d8d561ae0f7b60937b3bd4d92e19
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>lime_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      purple_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: 30eed20b95873611c2b60e54f8df6f4e6654fb9575fc47e63f63327f9f6c56cf
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>purple_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      white_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: 7e066c569d4b94e49b23770e46c9a0e1d736711becb702809375e2d5a32f2a99
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>white_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      green_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: efd8881d02fe9cee859ac597731b2df46bee6d52c446205f9da9dfa7bd111694
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>green_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      barrel:
+        Material: PLAYER_HEAD
+        SkinURL: 5193c89d1df679854f33c2215247b676a159d5395392d0c61b8476f813d9edb0
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>barrel</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      chest:
+        Material: PLAYER_HEAD
+        SkinURL: edc36c9cb50a527aa55607a0df7185ad20aabaa903e8d9abfc78260705540def
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>chest</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      gray_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: a95bde13c45754468cfc8c3a00133d997362fa7e302b0b0fbc4bd0fca6890059
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>gray_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      cyan_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: 101facfbdea4980bb0182dcf259341093e22b87375e70b849b88cfad17fc5b27
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>cyan_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      light_blue_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: dbcf2e5a0ee72bbd63b08336918f11730120a49df3557cfa84ff6450fbc4c65c
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>light_blue_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      brown_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: b41956931d1f6d1d1b6f82f077b8a265b259f5d29f567869e9955cc6f9a82f12
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>brown_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      orange_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: a83cbb7b98e1954dd2c007ea45975fc7fe1f6ebea7c12d75a578d0960f34996
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>orange_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      yellow_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: e780feff71541bf6eb4368e726f868871cc549f2599d45cc0e1c729825fee9df
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>yellow_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+      magenta_shulker_box:
+        Material: PLAYER_HEAD
+        SkinURL: 83524237183c2ba221ba61923a7130099e37166227cacb1f65cec93b6c33a6a8
+        Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>magenta_shulker_box</white>)</gray>
+        Lore:
+        - <gray>放置下来创建商店!</gray>
+  Creation:
+    Cost:
+      # 玩家创建商店需要支付的金额。
+      Create: 0.0
+      # 玩家移除商店需要支付的金额。
+      Remove: 0.0
+    # 列出不允许创建商店的世界列表。
+    World_Blacklist:
+    - "custom_world"
+    - "another_world"
+    # 设置特定等级/权限的玩家可以拥有的商店数量。
+    # 使用'-1'表示无限数量。
+    Max_Shops_Per_Rank:
+      # 可用值: RANK, PERMISSION
+      # ==================== RANK MODE ====================
+      # 通过玩家的权限组获取值。'Values'列表中的所有键将代表权限组名称。
+      # 如果玩家没有指定的组，则将使用'Default_Value'设置
+      #   Values:
+      #     vip: 1 # -> 玩家必须在'vip'权限组中。
+      #     gold: 2 # -> 玩家必须在'gold'权限组中。
+      #     emerald: 3 # -> 玩家必须在'emerald'权限组中。
+      #
+      # ==================== PERMISSION MODE ====================
+      # 通过玩家的权限获取值。'Values'列表中的所有键将代表'Permission_Prefix'设置（见下文）的后缀。
+      # 如果玩家没有指定的权限，则将使用'Default_Value'设置
+      #   Permission_Prefix: 'example.prefix.'
+      #   Values:
+      #     vip: 1 # -> 玩家必须有'example.prefix.vip'权限。
+      #     gold: 2 # -> 玩家必须有'example.prefix.gold'权限。
+      #     emerald: 3 # -> 玩家必须有'example.prefix.emerald'权限。
+      Mode: RANK
+      # 设置'PERMISSION'模式的权限前缀。
+      Permission_Prefix: "excellentshop.chestshop.shops.amount."
+      Default_Value: 10
+      Values:
+        vip: 20
+        admin: -1
+    # 设置插件是否会模拟方块放置，以确保玩家可以在那里创建商店。
+    # 这个设置应该足以作为与声明/保护插件的通用兼容性解决方案。
+    # 只有在遇到重大问题时才禁用此设置。
+    Check_Build_Access: true
+    In_Player_Claims_Only:
+      # 设置玩家是否只能在自己的声明区域内创建商店。
+      # 支持的插件: Lands, GriefPrevention, WorldGuard, Kingdoms
+      Enabled: false
+  Products:
+    # 设置特定等级/权限的玩家可以在商店中同时放置的商品数量。
+    # 使用'-1'表示无限数量。
+    Max_Products_Per_Shop:
+      # 可用值: RANK, PERMISSION
+      # ==================== RANK MODE ====================
+      # 通过玩家的权限组获取值。'Values'列表中的所有键将代表权限组名称。
+      # 如果玩家没有指定的组，则将使用'Default_Value'设置
+      #   Values:
+      #     vip: 1 # -> 玩家必须在'vip'权限组中。
+      #     gold: 2 # -> 玩家必须在'gold'权限组中。
+      #     emerald: 3 # -> 玩家必须在'emerald'权限组中。
+      #
+      # ==================== PERMISSION MODE ====================
+      # 通过玩家的权限获取值。'Values'列表中的所有键将代表'Permission_Prefix'设置（见下文）的后缀。
+      # 如果玩家没有指定的权限，则将使用'Default_Value'设置
+      #   Permission_Prefix: 'example.prefix.'
+      #   Values:
+      #     vip: 1 # -> 玩家必须有'example.prefix.vip'权限。
+      #     gold: 2 # -> 玩家必须有'example.prefix.gold'权限。
+      #     emerald: 3 # -> 玩家必须有'example.prefix.emerald'权限。
+      Mode: RANK
+      # 设置'PERMISSION'模式的权限前缀。
+      Permission_Prefix: "excellentshop.chestshop.products.amount."
+      Default_Value: 3
+      Values:
+        vip: 5
+        admin: -1
+    # 当启用时，所有添加为商店商品的物品都将以1的数量添加，而不管玩家使用的数量堆叠了多少。
+    New_Products_Single_Amount: false
+    # 无法作为商店商品的项目列表。
+    # 香草名称: https://minecraft.wiki/w/Java_Edition_data_values -> Blocks / Items -> Resource location column.
+    # 支持的插件: Oraxen, ItemsAdder, MMOItems
+    Material_Blacklist:
+    - "barrier"
+    - "custom_item_123"
+    # 如果物品的lore中包含以下词汇，则不允许将其用作商店商品。
+    Lore_Blacklist:
+    - "fuck"
+    - "ass hole bitch"
+    # 如果物品的名称中包含以下词汇，则不允许将其用作商店商品。
+    Name_Blacklist:
+    - "shit"
+    - "sample text"
+    Format:
+      # 商品lore格式。使用'%lore%'占位符插入商品物品的原始lore。
+      # 您可以使用'Chest Product'占位符: https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders
+      Main:
+      - '%lore%'
+      - ''
+      - '%buy%'
+      - ''
+      - '%sell%'
+      - ''
+      - <dgray>按住 <lgray>Shift</lgray> 快速购买和出售。</dgray>
+      # 如果商品可购买，则会出现的商品lore。
+      # 占位符: %buy%
+      Buy:
+      - <green><b>购买:</b></green>
+      - <green>←<white> 左键点击以 </white>%product_price_buy_formatted%<white> 购买</white></green>
+      - '<green>✔<white> 物品剩余: </white>%product_stock_global_buy_amount_left%</green>'
+      # 如果商品可销售，则会出现的商品lore。
+      # 占位符: %sell%
+      Sell:
+      - <red><b>销售:</b></red>
+      - <red>→<white> 右键点击以 </white>%product_price_sell_formatted%<white> 销售</white></red>
+      - <red>→<white> 按 [F] 以 </white>%product_price_sell_all_formatted%<white> 销售全部</white></red>
+      - '<red>✔<white> 商店空间: </white>%product_stock_global_sell_amount_left%</red>'
+Shop:
+  Product:
+    Bypass_Plugin_Detection:
+      # 当启用时，允许玩家绕过他们想要作为商店商品放置的物品的插件检测。
+      Enabled: false
+      # 当启用时，只有当玩家按住Shift键（潜行）时，绕过插件检测的商店商品才会起作用。
+      Hold_Shift: false
+Display:
+  # 设置用作默认商店展示的物品。
+  # 您可以为'Allowed_Containers'选项中设置的不同商店类型提供不同的展示。
+  # 使用'default'关键词为这里未列出的所有容器类型设置展示物品。
+  # 可用物品选项，包括模型数据: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+  Showcase:
+    chest:
+      Material: WHITE_STAINED_GLASS
+    default:
+      Material: GLASS
+  PlayerCustomization:
+    # 设置玩家是否能够个性化定制他们商店的展示。
+    # 此功能也可以通过以下权限进行管理: 'excellentshop.chestshop.display.customization.'
+    Enabled: true
+    # 玩家可用的商店展示物品列表。
+    Showcases:
+      glass:
+        Material: GLASS
+      blue_glass:
+        Material: BLUE_STAINED_GLASS
+      black_glass:
+        Material: BLACK_STAINED_GLASS
+      gray_glass:
+        Material: GRAY_STAINED_GLASS
+      white_glass:
+        Material: WHITE_STAINED_GLASS
+      purple_glass:
+        Material: PURPLE_STAINED_GLASS
+      light_gray_glass:
+        Material: LIGHT_GRAY_STAINED_GLASS
+      orange_glass:
+        Material: ORANGE_STAINED_GLASS
+      lime_glass:
+        Material: LIME_STAINED_GLASS
+      light_blue_glass:
+        Material: LIGHT_BLUE_STAINED_GLASS
+      brown_glass:
+        Material: BROWN_STAINED_GLASS
+      green_glass:
+        Material: GREEN_STAINED_GLASS
+      red_glass:
+        Material: RED_STAINED_GLASS
+      cyan_glass:
+        Material: CYAN_STAINED_GLASS
+      pink_glass:
+        Material: PINK_STAINED_GLASS
+      magenta_glass:
+        Material: MAGENTA_STAINED_GLASS
+      yellow_glass:
+        Material: YELLOW_STAINED_GLASS
+  # 定义商店展示的更新间隔（秒）。
+  Update_Interval: 3
+  # 设置商店展示的可见距离。
+  # 当玩家足够接近时，他们将看到商店展示。
+  Visible_Distance: 10
+  Title:
+    # 当'true'时，会在商店上方创建客户端全息图。
+    Enabled: true
+    # 设置当购买和销售选项都可用时，玩家和管理员商店的全息文字格式。
+    # 您可以使用'Chest Shop'占位符: https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders
+    # 显示物品名称: %product_name%
+    # 显示物品价格: %product_price_buy%, %product_price_sell%
+    # 这里也支持PlaceholderAPI。
+    Values:
+      PLAYER:
+      - <lyellow><b>%shop_name%</b></lyellow>
+      - <lgray>%product_name%</lgray>
+      - '%buy% %sell%'
+      ADMIN:
+      - <lyellow><b>%shop_name%</b></lyellow>
+      - <lgray>%product_name%</lgray>
+      - '%buy% %sell%'
+    # 设置当显示商品可购买时，'%buy%'占位符将出现的全息文字。
+    # 价格占位符: %product_price_buy%
+    # 所有'Title -> Values'选项中的占位符在这里也可用。
+    BuyValue:
+      PLAYER: '<lgray><green>购买: </green><lgreen>%product_price_buy%</lgreen></lgray>'
+      ADMIN: '<lgray><green>购买: </green><lgreen>%product_price_buy%</lgreen></lgray>'
+    # 设置当显示商品可销售时，'%sell%'占位符将出现的全息文字。
+    # 价格占位符: %product_price_sell%
+    # 所有'Title -> Values'选项中的占位符在这里也可用。
+    SellValue:
+      PLAYER: '<lgray><red>出售: </red><lred>%product_price_sell%</lred></lgray>'
+      ADMIN: '<lgray><red>出售: </red><lred>%product_price_sell%</lred></lgray>'
+  Hologram:
+    # 当启用时，强制插件使用护甲架实体而不是展示实体。
+    Force_ArmorStands: false
+    # 设置全息图行距。
+    LineGap: 0.3
+Transaction_Logs:
+  Output:
+    File: true
+    Console: true
+  Format:
+    Date: "dd/MM/yyyy HH:mm:ss"
+    Purchase: '%type%: %player_name% - x%amount% of %item% for %price% in %shop_name% shop.'

@@ -1,0 +1,157 @@
+Settings:
+  # 设置默认拍卖货币。
+  Default_Currency: vault
+  # 玩家可以使用的货币列表。
+  # 您可以使用星号 '*' 来允许所有货币。
+  Allowed_Currencies:
+  - '*'
+  # 拍卖无法使用的世界的列表。
+  # [*] 区分大小写!
+  Disabled_Worlds:
+  - another_world
+  - custom_world
+  # 玩家在以下游戏模式下无法将物品添加到拍卖中。
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/GameMode.html
+  Disabled_Gamemodes:
+  - CREATIVE
+  Listings:
+    # 设置物品在未被购买时在拍卖中保留的时间。
+    # 玩家可以在有限的时间内（参见 Purge_In）在拍卖 GUI 中退回过期物品。
+    # [*] 此设置不会影响现有列表。
+    # [默认为 604800 即 7 天]
+    Expire_In: 604800
+    # 设置过期和未领取物品被完全删除的时间（以秒为单位）。
+    # 玩家可以在拍卖 GUI 中领取和退回过期物品。
+    # [*] 此设置不会影响现有列表。
+    # [默认为 604800 即 7 天]
+    Purge_In: 604800
+    # 设置玩家在拍卖中添加新列表时是否发送广播消息。
+    Announce: true
+    # 设置玩家根据他们的等级或权限可以拥有的最大活跃列表数量。
+    # 使用 '-1' 表示无限制数量。
+    Listings_Per_Rank:
+      # 可用值：RANK, PERMISSION
+      # ==================== RANK MODE ====================
+      # 通过玩家的权限组获取值。'Values' 列表中的所有键将代表权限组名。
+      # 如果玩家没有指定的组，则将使用 'Default_Value' 设置
+      #   Values:
+      #     vip: 1 # -> 玩家必须在 'vip' 权限组中。
+      #     gold: 2 # -> 玩家必须在 'gold' 权限组中。
+      #     emerald: 3 # -> 玩家必须在 'emerald' 权限组中。
+      #
+      # ==================== PERMISSION MODE ====================
+      # 通过玩家的权限获取值。'Values' 列表中的所有键将代表 'Permission_Prefix' 设置（见下文）的后缀。
+      # 如果玩家没有指定的权限，则将使用 'Default_Value' 设置
+      #   Permission_Prefix: 'example.prefix.'
+      #   Values:
+      #     vip: 1 # -> 玩家必须有 'example.prefix.vip' 权限。
+      #     gold: 2 # -> 玩家必须有 'example.prefix.gold' 权限。
+      #     emerald: 3 # -> 玩家必须有 'example.prefix.emerald' 权限。
+      Mode: RANK
+      # 设置 'PERMISSION' 模式的权限前缀。
+      Permission_Prefix: auction.listings.amount.
+      Default_Value: 10
+      Values:
+        vip: 15
+        gold: 20
+        admin: -1
+    # 设置售出的列表是否在卖家在线时自动领取。
+    AutoClaim: false
+    Price:
+      # 当设置为 'true' 时，在出售时从列表的价格中删除小数。
+      Round_To_Integer: false
+      # 设置指定货币的最小和最大可能的列表价格。
+      # 使用 '-1' 表示无限制数量。
+      # 使用 'default' 关键词为所有未列出的货币定义价格范围。
+      # 如果列表的货币在此未列出且未定义 'default' 值，则不使用限制!
+      Per_Currency:
+        vault:
+          Min: 1.0
+          Max: 1.0E7
+        default:
+          Min: -1.0
+          Max: -1.0
+      # 设置指定方块/物品的最小和最大可能的列表价格。
+      # 使用 '-1' 表示无限制数量。
+      # 物品/方块名称：https://minecraft.wiki/w/Java_Edition_data_values -> Blocks / Items -> Resource location column.
+      Per_Material:
+        dirt:
+          Min: 1.0
+          Max: 15.0
+        emerald:
+          Min: 300.0
+          Max: -1.0
+        diamond:
+          Min: 500.0
+          Max: -1.0
+    Tax:
+      # 卖家添加物品到拍卖时必须支付的税费金额（占列表价格的百分比）。
+      # 例如：玩家想以 50 美元的价格出售物品，税率为 10%，他将不得不支付 5 美元才能做到这一点。
+      On_Listing_Add: 10.0
+      # 当售出的列表被领取时，从最终价格中扣除的税费金额（占列表价格的百分比）。
+      # 例如：玩家以 50 美元的价格出售物品，税率为 10%，他只能领取 45 美元。
+      On_Listing_Purchase: 0.0
+    # 无法作为商店商品添加的物品列表。
+    # 普通名称：https://minecraft.wiki/w/Java_Edition_data_values -> Blocks / Items -> Resource location column.
+    # 支持的插件：Oraxen, ItemsAdder, MMOItems
+    Disabled_Materials:
+    - barrier
+    - bedrock
+    - flame_sword
+    - custom_item_name
+    # 名字中含有以下文字的物品无法添加到拍卖中。
+    Disabled_Names:
+    - bad text
+    - badword
+    # 名称中含有以下文字的物品无法添加到拍卖中。
+    Disabled_Lores:
+    - bad text line
+    - badword
+    # 无法添加到拍卖中的项目模型数据值列表。
+    Disabled_Models:
+      DIAMOND_HELMET: 1002,1016
+      NETHERITE_SWORD: 1001,1015
+Menu:
+  Container_Preview:
+    # 设置拍卖 GUI 中是否提供容器预览功能。
+    # 这允许玩家在购买前查看 Shulker Boxes、Chests、Barrels 等内容。
+    # 使用鼠标右键 (RMB)。
+    Enabled: true
+    # 设置预览 GUI 的标题。
+    Title: 预览
+Database:
+  # 设置数据库类型。
+  # 可用值：MYSQL,SQLITE
+  Type: SQLITE
+  # 设置在线玩家的插件数据将保存到数据库的频率（分钟）。
+  # 设置为 '-1' 以禁用。
+  Auto_Save_Interval: 20
+  # 设置插件数据将从远程数据库获取和加载的频率（秒）。
+  # 对于 SQLITE 无用。
+  # 设置为 '-1' 以禁用。
+  Sync_Interval: -1
+  # 数据库中插件表的自定义前缀。
+  Table_Prefix: excellentshop_auction
+  MySQL:
+    # 数据库用户名。
+    Username: root
+    # 数据库密码。
+    Password: root
+    # 数据库主机。例如：localhost:3306, 127.0.0.1:3306
+    Host: localhost:3306
+    # 插件将创建表格的 MySQL 数据库名称。
+    Database: minecraft
+    # 连接选项。除非您知道您在做什么，否则不要触摸。
+    Options: ?allowPublicKeyRetrieval=true&useSSL=false
+  SQLite:
+    # SQLite 数据库文件的文件名。
+    # 实际上它是文件的路径，所以这里可以使用目录。
+    FileName: data.db
+  Purge:
+    # 启用清除功能。
+    # 清除将删除足够 '旧' 的插件表中的所有记录。
+    Enabled: false
+    # 设置数据库记录在被清除之前的最最大 '年龄'。
+    # 此选项可能根据插件有不同的行为。
+    # 默认情况下，它是插件用户的不活动时间（天数）。
+    For_Period: 60

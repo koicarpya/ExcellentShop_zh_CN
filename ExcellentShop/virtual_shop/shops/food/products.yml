@@ -1,0 +1,793 @@
+List:
+  apple:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ej1e1o6op80
+      Item: k0000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ej1e1o6op80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 0
+      Page: 1
+  golden_apple:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt6errcchimsnr1e1o6op80
+      Item: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt6errcchimsnr1e1o6op80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 500.0
+      BUY: 1000.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 1
+      Page: 1
+  enchanted_golden_apple:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400g6qqbeclhn4ob6egt6arj3d1gmst35chfmerrcchimsnr1e1o6op80
+      Item: 180000o00lhmutbeeg00000110004qb400g6qqbeclhn4ob6egt6arj3d1gmst35chfmerrcchimsnr1e1o6op80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 25000.0
+      BUY: 50000.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 2
+      Page: 1
+  bread:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ej2e9im2p00
+      Item: k0000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ej2e9im2p00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 7
+      Page: 1
+  rabbit_stew:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3ksj1c9h6it2vedq6ato0
+      Item: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3ksj1c9h6it2vedq6ato0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 250.0
+      BUY: 500.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 8
+      Page: 1
+  cookie:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg010rb9dpim6sj1cpq3korfdtlmip80
+      Item: 500003002m6rrldpq00000044000j9cg010rb9dpim6sj1cpq3korfdtlmip80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 9
+      Page: 1
+  pumpkin_pie:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3ks3ldlo6mqbebto6ip80
+      Item: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3ks3ldlo6mqbebto6ip80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 10
+      Page: 1
+  cake:
+    Handler: bukkit_item
+    Content:
+      Preview: 2g0001g01b3dtqmst000000220009km800edlkmspb3e9gmct1qcdgmmp80
+      Item: 2g0001g01b3dtqmst000000220009km800edlkmspb3e9gmct1qcdgmmp80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 11
+      Page: 1
+  mushroom_stew:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79mnasr8e9nmuravedq6ato0
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79mnasr8e9nmuravedq6ato0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 17
+      Page: 1
+  melon_slice:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3krb5dhnmsnrjdhkm6p80
+      Item: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3krb5dhnmsnrjdhkm6p80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 18
+      Page: 1
+  carrot:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg010rb9dpim6sj1cpq3kor1e9p6ut00
+      Item: 500003002m6rrldpq00000044000j9cg010rb9dpim6sj1cpq3kor1e9p6ut00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 19
+      Page: 1
+  golden_carrot:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79jmur34cln5uor1e9p6ut00
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79jmur34cln5uor1e9p6ut00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 500.0
+      BUY: 1000.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 20
+      Page: 1
+  baked_potato:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt64obbcli5us3fehgn8ro0
+      Item: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt64obbcli5us3fehgn8ro0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 50.0
+      BUY: 75.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 21
+      Page: 1
+  bowl:
+    Handler: bukkit_item
+    Content:
+      Preview: 2g0001g01b3dtqmst000000220009km800edlkmspb3e9gmct1qc9nner00
+      Item: 2g0001g01b3dtqmst000000220009km800edlkmspb3e9gmct1qc9nner00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 26
+      Page: 1
+  cooked_porkchop:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i006bdd5n6aoric5j78ej3dtnmmpb4bto6usjbcdk6us00
+      Item: k0000c00aorfeln78000000gg002d5i006bdd5n6aoric5j78ej3dtnmmpb4bto6usjbcdk6us00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 50.0
+      BUY: 100.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 27
+      Page: 1
+  cooked_beef:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3korfdtlmap2vc9imapg0
+      Item: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3korfdtlmap2vc9imapg0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 50.0
+      BUY: 100.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 28
+      Page: 1
+  cooked_mutton:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79hmurrbcli5urblehq6urg0
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79hmurrbcli5urblehq6urg0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 50.0
+      BUY: 100.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 29
+      Page: 1
+  cooked_rabbit:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79hmurrbcli5usj1c9h6it00
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79hmurrbcli5usj1c9h6it00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 50.0
+      BUY: 100.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 30
+      Page: 1
+  cooked_chicken:
+    Handler: bukkit_item
+    Content:
+      Preview: 2g0001g01b3dtqmst000000220009km800odlkmspb3e9gmct1qcdnmuqr5chfm6q39cdlmarg0
+      Item: 2g0001g01b3dtqmst000000220009km800odlkmspb3e9gmct1qcdnmuqr5chfm6q39cdlmarg0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 50.0
+      BUY: 100.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 31
+      Page: 1
+  cooked_salmon:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79hmurrbcli5usr1dhmmurg0
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79hmurrbcli5usr1dhmmurg0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 50.0
+      BUY: 100.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 32
+      Page: 1
+  cooked_cod:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i0053dd5n6aoric5j78ej3dtnmmpb4bthmup00
+      Item: k0000c00aorfeln78000000gg002d5i0053dd5n6aoric5j78ej3dtnmmpb4bthmup00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 50.0
+      BUY: 100.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 33
+      Page: 1
+  sweet_berries:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79pnepb5ehfm4pbie9kmaso0
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79pnepb5ehfm4pbie9kmaso0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 36
+      Page: 1
+  glow_berries:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt6er3fetfm4pbie9kmaso0
+      Item: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt6er3fetfm4pbie9kmaso0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 37
+      Page: 1
+  chorus_fruit:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt66q3fe9qn6nr6e9qmit00
+      Item: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt66q3fe9qn6nr6e9qmit00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 38
+      Page: 1

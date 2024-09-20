@@ -1,0 +1,267 @@
+Settings:
+  # GUI标题。
+  Title: <black><b>价格设置</b></black>
+  # GUI大小。必须是9的倍数。
+  # 仅对'CHEST'库存类型有用。
+  Size: 27
+  # GUI类型。
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # 设置GUI自动刷新间隔（秒）。设置为0以禁用。
+  Auto_Refresh: 0
+Format:
+  Lore:
+    Price:
+      SELL:
+        DYNAMIC:
+        - '<lyellow>▪ <lgray>最小: </lgray>%product_pricer_sell_min%</lyellow>'
+        - '<lyellow>▪ <lgray>最大: </lgray>%product_pricer_sell_max%</lyellow>'
+        - ''
+        - <lgray>设置价格范围。</lgray>
+        - ''
+        - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>设置最小值</lyellow>。</lgray>
+        - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>设置最大值</lyellow>。</lgray>
+        FLAT:
+        - '<lyellow>▪ <lgray>当前: </lgray>%product_price_sell%</lyellow>'
+        - ''
+        - <lgray>从买家/卖家的角度设置价格。</lgray>
+        - ''
+        - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>更改</lyellow>。</lgray>
+        - <lgray><lred>[▶]</lred> [Q/Drop] 键以<lred>禁用</lred>。</lgray>
+        PLAYER_AMOUNT:
+        - '<lyellow>▪ <lgray>最小: </lgray>%product_pricer_sell_min%</lyellow>'
+        - '<lyellow>▪ <lgray>最大: </lgray>%product_pricer_sell_max%</lyellow>'
+        - ''
+        - <lgray>设置价格范围。</lgray>
+        - ''
+        - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>设置最小值</lyellow>。</lgray>
+        - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>设置最大值</lyellow>。</lgray>
+        FLOAT:
+        - '<lyellow>▪ <lgray>最小: </lgray>%product_pricer_sell_min%</lyellow>'
+        - '<lyellow>▪ <lgray>最大: </lgray>%product_pricer_sell_max%</lyellow>'
+        - ''
+        - <lgray>设置价格范围。</lgray>
+        - ''
+        - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>设置最小值</lyellow>。</lgray>
+        - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>设置最大值</lyellow>。</lgray>
+      BUY:
+        DYNAMIC:
+        - '<lyellow>▪ <lgray>最小: </lgray>%product_pricer_buy_min%</lyellow>'
+        - '<lyellow>▪ <lgray>最大: </lgray>%product_pricer_buy_max%</lyellow>'
+        - ''
+        - <lgray>设置价格范围。</lgray>
+        - ''
+        - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>设置最小值</lyellow>。</lgray>
+        - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>设置最大值</lyellow>。</lgray>
+        FLAT:
+        - '<lyellow>▪ <lgray>当前: </lgray>%product_price_buy%</lyellow>'
+        - ''
+        - <lgray>从买家/卖家的角度设置价格。</lgray>
+        - ''
+        - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>更改</lyellow>。</lgray>
+        - <lgray><lred>[▶]</lred> [Q/Drop] 键以<lred>禁用</lred>。</lgray>
+        PLAYER_AMOUNT:
+        - '<lyellow>▪ <lgray>最小: </lgray>%product_pricer_buy_min%</lyellow>'
+        - '<lyellow>▪ <lgray>最大: </lgray>%product_pricer_buy_max%</lyellow>'
+        - ''
+        - <lgray>设置价格范围。</lgray>
+        - ''
+        - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>设置最小值</lyellow>。</lgray>
+        - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>设置最大值</lyellow>。</lgray>
+        FLOAT:
+        - '<lyellow>▪ <lgray>最小: </lgray>%product_pricer_buy_min%</lyellow>'
+        - '<lyellow>▪ <lgray>最大: </lgray>%product_pricer_buy_max%</lyellow>'
+        - ''
+        - <lgray>设置价格范围。</lgray>
+        - ''
+        - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>设置最小值</lyellow>。</lgray>
+        - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>设置最大值</lyellow>。</lgray>
+# ==================== GUI CONTENT ====================
+# 您可以自由编辑此部分中的项目（添加、移除、修改项目）。
+# 以下值可用作按钮类型：
+# CLOSE
+# PRODUCT_CHANGE_CURRENCY
+# PRODUCT_CHANGE_PRICE_BUY
+# PRODUCT_CHANGE_PRICE_INITIAL
+# PRODUCT_CHANGE_PRICE_PLAYER_ADJUST
+# PRODUCT_CHANGE_PRICE_PLAYER_INITIAL
+# PRODUCT_CHANGE_PRICE_PLAYER_STEP
+# PRODUCT_CHANGE_PRICE_REFRESH
+# PRODUCT_CHANGE_PRICE_SELL
+# PRODUCT_CHANGE_PRICE_STEP
+# PRODUCT_CHANGE_PRICE_TYPE
+# RETURN
+# ==================== ITEM OPTIONS ====================
+# > Item: 要显示的项目。请检查：https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: 按钮优先级。较好的值将覆盖同一插槽中的其他项目。
+# > Slots: 按钮插槽。从 [0] 到 [Size - 1]。用逗号分隔。
+# > Click_Commands: 点击时执行自定义命令。此处可用PlaceholderAPI。
+#     可用点击类型：LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     使用前缀 'player:' 以玩家身份运行命令。
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  return:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: be9ae7a4be65fcbaee65181389a2f7d47e2e326db59ea3eb789a92c85ea46
+      Name: <lgray><b>返回</b></lgray>
+    Slots: '22'
+    Type: return
+  currency:
+    Priority: 10
+    Item:
+      Material: GOLD_NUGGET
+      Name: <lyellow><b>货币</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>当前: </lgray>%product_currency%</lyellow>'
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '3'
+    Type: product_change_currency
+  price_type:
+    Priority: 10
+    Item:
+      Material: COMPARATOR
+      Name: <lyellow><b>价格类型</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>当前: </lgray>%product_price_type%</lyellow>'
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '5'
+    Type: product_change_price_type
+  buy_price:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 5ff31431d64587ff6ef98c0675810681f8c13bf96f51d9cb07ed7852b2ffd1
+      Name: <lyellow><b>购买价格</b></lyellow>
+      Lore:
+      - '%price_buy%'
+    Slots: '10'
+    Type: product_change_price_buy
+  sell_price:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 4e4b8b8d2362c864e062301487d94d3272a6b570afbf80c2c5b148c954579d46
+      Name: <lyellow><b>销售价格</b></lyellow>
+      Lore:
+      - '%price_sell%'
+    Slots: '11'
+    Type: product_change_price_sell
+  refresh_settings:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: d2d99342be67156cef48b50a97192989222d569b446092899cc23347542e71aa
+      Name: <lyellow><b>刷新设置</b></lyellow>
+      Lore:
+      - <lred>需要天和时间！</lred>
+      - ''
+      - '<lyellow>▪ <lgray>小数位数: </lgray>%product_pricer_float_round_decimals%</lyellow>'
+      - '<lyellow>▪ <lgray>天: </lgray></lyellow>'
+      - '%product_pricer_float_refresh_days%'
+      - <lyellow>▪ <lgray>时间:</lgray></lyellow>
+      - '%product_pricer_float_refresh_times%'
+      - ''
+      - <lgray>定义价格更新的频率，</lgray>
+      - <lgray>即多久使用新值重新计算一次。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> [Q/Drop] 键以<lyellow>切换小数位数</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>添加天</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> Shift-左键以<lyellow>清除天</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>添加时间</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> Shift-右键以<lyellow>清除时间</lyellow>。</lgray>
+    Slots: '15'
+    Type: product_change_price_refresh
+  price_step:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 200f58f3f7ce73d4aa6cc65f859c36cc7543a82e4f9da031784bd62c8d2bca67
+      Name: <lyellow><b>价格步长</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>购买: </lgray>%product_pricer_dynamic_step_buy%</lyellow>'
+      - '<lyellow>▪ <lgray>销售: </lgray>%product_pricer_dynamic_step_sell%</lyellow>'
+      - ''
+      - <lgray>定义每次购买/销售时价格将</lgray>
+      - <lgray>上升/下降多少。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>更改购买</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>更改销售</lyellow>。</lgray>
+    Slots: '15'
+    Type: product_change_price_step
+  initial_price:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 26e197928a03e65b255d094cc8723faa7d41ccec56643b44b9cccbd0519de879
+      Name: <lyellow><b>初始价格</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>购买: </lgray>%product_pricer_dynamic_initial_buy%</lyellow>'
+      - '<lyellow>▪ <lgray>销售: </lgray>%product_pricer_dynamic_initial_sell%</lyellow>'
+      - ''
+      - <lgray>设置商品的初始（开始）价格。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>更改购买</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>更改销售</lyellow>。</lgray>
+    Slots: '16'
+    Type: product_change_price_initial
+  initial_price_1:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 26e197928a03e65b255d094cc8723faa7d41ccec56643b44b9cccbd0519de879
+      Name: <lyellow><b>初始价格</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>购买: </lgray>%product_pricer_dynamic_initial_buy%</lyellow>'
+      - '<lyellow>▪ <lgray>销售: </lgray>%product_pricer_dynamic_initial_sell%</lyellow>'
+      - ''
+      - <lgray>设置商品的初始（开始）价格。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>更改购买</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>更改销售</lyellow>。</lgray>
+    Slots: '14'
+    Type: product_change_price_player_initial
+  price_adjust:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 200f58f3f7ce73d4aa6cc65f859c36cc7543a82e4f9da031784bd62c8d2bca67
+      Name: <lyellow><b>价格调整</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>购买: </lgray>%product_pricer_players_adjust_amount_buy%</lyellow>'
+      - '<lyellow>▪ <lgray>销售: </lgray>%product_pricer_players_adjust_amount_sell%</lyellow>'
+      - ''
+      - <lgray>定义价格将根据<lyellow>调整步长</lyellow>选项中设置的值</lgray>
+      - <lgray>为每个X在线玩家调整多少。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>更改购买</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>更改销售</lyellow>。</lgray>
+    Slots: '15'
+    Type: product_change_price_player_adjust
+  adjust_step:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 60d106609f05b9830043f3351b5f3ec3cae28d08900436692320022db491e671
+      Name: <lyellow><b>调整步长</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>当前: </lgray>%product_pricer_players_adjust_step%</lyellow>'
+      - ''
+      - <lgray>设置价格将根据在线玩家数量</lgray>
+      - <lgray>通过<lyellow>价格调整</lyellow>选项中设置的值进行调整。</lgray>
+      - ''
+      - <lyellow><b>示例：</b></lyellow>
+      - <lyellow>1</lyellow> = 对于<lyellow>每个</lyellow>在线玩家。
+      - <lyellow>5</lyellow> = 对于<lyellow>每5个</lyellow>玩家（5, 10, 15, 等等）
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '16'
+    Type: product_change_price_player_adjust

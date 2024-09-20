@@ -1,0 +1,14 @@
+Name: <lgreen><b>羊毛市场</b></lgreen>
+Description:
+- <gray>各种颜色的羊毛。</gray>
+Permission_Required: false
+Layout:
+  Name: default
+Citizens:
+  Attached_NPC: ''
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Pages: 1
+Icon:
+  Material: LIME_WOOL

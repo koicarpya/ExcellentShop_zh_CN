@@ -1,0 +1,81 @@
+Settings:
+  # GUI标题。
+  Title: <black><b>商店列表</b></black>
+  # GUI大小。必须是9的倍数。
+  # 仅对'CHEST'库存类型有用。
+  Size: 45
+  # GUI类型。
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # 设置GUI自动刷新间隔（秒）。设置为0以禁用。
+  Auto_Refresh: 0
+Shop:
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35
+  Name: <lyellow><b>%shop_name%</b></lyellow>
+  Lore:
+    Own:
+    - <lyellow>▪ <lgray>位置:</lgray> %shop_location_x%<lgray>, </lgray>%shop_location_y%<lgray>, </lgray>%shop_location_z%<lgray> 在 </lgray>%shop_location_world%</lyellow>
+    - ''
+    - '%products%'
+    - '%action_teleport%'
+    - '%action_editor%'
+    Others:
+    - '%products%'
+    - '%action_teleport%'
+    - '%action_editor%'
+    Action_Teleport:
+    - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>传送</lyellow>。</lgray>
+    Action_Editor:
+    - <lgray><lyellow>[▶]</lyellow> 右键点击以<lyellow>编辑</lyellow>。</lgray>
+  ProductInfo:
+    DisplayLimit: 3
+    Entry:
+    - <lyellow>▪ <lgray>商品:</lgray> %product_unit_amount%x %product_preview_name%</lyellow>
+    - <lyellow>▪ <lgray>购买价格:</lgray> <green>%product_price_buy_formatted%</green></lyellow>
+    - <lyellow>▪ <lgray>出售价格:</lgray> <red>%product_price_sell_formatted%</red></lyellow>
+    - ' '
+# ==================== GUI CONTENT ====================
+# 您可以自由编辑此部分中的项目（添加、移除、修改项目）。
+# 以下值可用作按钮类型：
+# CLOSE
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# ==================== ITEM OPTIONS ====================
+# > Item: 要显示的项目。请检查：https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: 按钮优先级。较好的值将覆盖同一插槽中的其他项目。
+# > Slots: 按钮插槽。从 [0] 到 [Size - 1]。用逗号分隔。
+# > Click_Commands: 点击时执行自定义命令。此处可用PlaceholderAPI。
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  return:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: be9ae7a4be65fcbaee65181389a2f7d47e2e326db59ea3eb789a92c85ea46
+      Name: <lgray><b>返回</b></lgray>
+    Slots: '40'
+    Type: return
+  _previous_page:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 86971dd881dbaf4fd6bcaa93614493c612f869641ed59d1c9363a3666a5fa6
+      Name: <lgray>← 上一页</lgray>
+    Slots: '39'
+    Type: page_previous
+  next_page_:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: f32ca66056b72863e98f7f32bd7d94c7a0d796af691c9ac3a9136331352288f9
+      Name: <lgray>下一页 →</lgray>
+    Slots: '41'
+    Type: page_next

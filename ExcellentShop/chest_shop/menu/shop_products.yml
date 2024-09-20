@@ -1,0 +1,67 @@
+Settings:
+  # GUI标题。
+  Title: <black><b>商店商品</b></black>
+  # GUI大小。必须是9的倍数。
+  # 仅对'CHEST'库存类型有用。
+  Size: 18
+  # GUI类型。
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # 设置GUI自动刷新间隔（秒）。设置为0以禁用。
+  Auto_Refresh: 0
+Products:
+  Slots: 0,1,2,3,4,5,6,7,8
+  Free:
+    Material: PLAYER_HEAD
+    SkinURL: dd10aa51522d3d6a2d8232ed886c79987e1e53956646dafbabd9eddff6986
+    Name: <lgreen><b>✔ 可用插槽</b></lgreen>
+    Lore:
+    - <lgray>将商品放在这里添加到商店！</lgray>
+  Locked:
+    Material: PLAYER_HEAD
+    SkinURL: 4051b59085d2c4249577823f63e1e2eb9f7cf64b7c78785a21805fad3ef14
+    Name: <lred><b>✘ 锁定插槽</b></lred>
+    Lore:
+    - <lgray>哦！当前这个插槽不可用。</lgray>
+    - ''
+    - <lgray>您可以在我们的等级系统中解锁插槽：</lgray>
+    - <lred>www.put_your_store.com</lred>
+  Product:
+    Name: <lyellow><b>%product_preview_name%</b></lyellow>
+    Lore:
+    - '%product_preview_lore%'
+    - ''
+    - '<lyellow>▪ <lgray>货币: </lgray>%product_currency%</lyellow>'
+    - '<lyellow>▪ <lgray>价格类型: </lgray>%product_price_type%</lyellow>'
+    - '<lyellow>▪ <lgray>购买价格: </lgray>%product_price_buy_formatted%</lyellow>'
+    - '<lyellow>▪ <lgray>销售价格: </lgray>%product_price_sell_formatted%</lyellow>'
+    - ''
+    - <lgray><lyellow>[▶]</lyellow> 左键点击以<lyellow>编辑</lyellow>。</lgray>
+    - <lgray><lyellow>[▶]</lyellow> Shift-右键以<lyellow>删除</lyellow>。</lgray>
+# ==================== GUI CONTENT ====================
+# 您可以自由编辑此部分中的项目（添加、移除、修改项目）。
+# 以下值可用作按钮类型：
+# CLOSE
+# RETURN
+# ==================== ITEM OPTIONS ====================
+# > Item: 要显示的项目。请检查：https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: 按钮优先级。较好的值将覆盖同一插槽中的其他项目。
+# > Slots: 按钮插槽。从 [0] 到 [Size - 1]。用逗号分隔。
+# > Click_Commands: 点击时执行自定义命令。此处可用PlaceholderAPI。
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  return:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: be9ae7a4be65fcbaee65181389a2f7d47e2e326db59ea3eb789a92c85ea46
+      Name: <lgray><b>返回</b></lgray>
+    Slots: '13'
+    Type: return

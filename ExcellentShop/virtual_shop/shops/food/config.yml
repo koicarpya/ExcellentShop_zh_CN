@@ -1,0 +1,14 @@
+Name: <lred><b>食品市场</b></lred>
+Description:
+- <gray>所有常规食品。</gray>
+Permission_Required: false
+Layout:
+  Name: default
+Citizens:
+  Attached_NPC: ''
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Pages: 1
+Icon:
+  Material: SWEET_BERRIES

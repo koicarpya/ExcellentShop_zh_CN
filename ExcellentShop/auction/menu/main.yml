@@ -1,0 +1,207 @@
+Settings:
+  # GUI标题。
+  Title: <black><b>拍卖行</b></black>
+  # GUI大小。必须是9的倍数。
+  # 仅适用于'CHEST'库存类型。
+  Size: 54
+  # GUI类型。
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # 设置GUI自动刷新间隔（秒）。设置为0以禁用。
+  Auto_Refresh: 1
+Items:
+  Name: <lyellow><b>%listing_item_name%</b></lyellow>
+  Lore:
+  - '%lore_format%'
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35
+Lore_Format:
+  # 设置容器列表的预览动作格式。
+  # 在列表说明格式中使用占位符'%action_preview%'来插入。
+  Action_Preview:
+  - <lgray><lgreen>[▶]</lgreen> 右键点击以<lgreen>预览</lgreen>。</lgray>
+  OWNER:
+  - <dgray><i>（这是您的列表）</i></dgray>
+  - ''
+  - '%listing_item_lore%'
+  - ''
+  - <lyellow><b>信息：</b></lyellow>
+  - '<lyellow>▪ <lgray>价格: </lgray>%listing_price%</lyellow>'
+  - '<lyellow>▪ <lgray>有效期: </lgray>%listing_expires_in%</lyellow>'
+  - ''
+  - <lgray><lgreen>[▶]</lgreen> Shift-右键点击以<lgreen>移除</lgreen>。</lgray>
+  - '%action_preview%'
+  PLAYER:
+  - '%listing_item_lore%'
+  - ''
+  - <lyellow><b>信息：</b></lyellow>
+  - '<lyellow>▪ <lgray>价格: </lgray>%listing_price%</lyellow>'
+  - '<lyellow>▪ <lgray>卖家: </lgray>%listing_seller%</lyellow>'
+  - '<lyellow>▪ <lgray>有效期: </lgray>%listing_expires_in%</lyellow>'
+  - ''
+  - <lgray><lgreen>[▶]</lgreen> 左键点击以<lgreen>购买</lgreen>。</lgray>
+  - '%action_preview%'
+  ADMIN:
+  - '%listing_item_lore%'
+  - ''
+  - <lyellow><b>信息：</b></lyellow>
+  - '<lyellow>▪ <lgray>价格: </lgray>%listing_price%</lyellow>'
+  - '<lyellow>▪ <lgray>卖家: </lgray>%listing_seller%</lyellow>'
+  - '<lyellow>▪ <lgray>添加日期: </lgray>%listing_date_creation%</lyellow>'
+  - '<lyellow>▪ <lgray>有效期: </lgray>%listing_expires_in%</lyellow>'
+  - ''
+  - <lgray><lgreen>[▶]</lgreen> 左键点击以<lgreen>购买</lgreen>。</lgray>
+  - <lgray><lgreen>[▶]</lgreen> Shift-右键点击以<lgreen>移除</lgreen>。</lgray>
+  - '%action_preview%'
+  List:
+    Selected: <lgreen>✔ %name%</lgreen>
+    Unselected: <lgray>   %name%</lgray>
+# ==================== GUI内容 ====================
+# 您可以自由编辑此部分中的物品（添加、删除、修改物品）。
+# 以下值可用作按钮类型：
+# CATEGORY_FILTER
+# CLOSE
+# CURRENCY_FILTER
+# EXPIRED_LISTINGS
+# LISTING_ORDER
+# OWN_LISTINGS
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# SALES_HISTORY
+# UNCLAIMED_ITEMS
+# ==================== 项目选项 ====================
+# > Item: 要显示的项目。请查看：https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: 按钮优先级。更好的值将覆盖同一插槽中的其他项目。
+# > Slots: 按钮插槽。从[0]到[Size - 1]。用逗号分隔。
+# > Click_Commands: 在点击时执行自定义命令。此处可用PlaceholderAPI。
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  black_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: BLACK_STAINED_GLASS_PANE
+    Slots: 36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53
+    Type: default
+  _previous_page:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 86971dd881dbaf4fd6bcaa93614493c612f869641ed59d1c9363a3666a5fa6
+      Name: <lgray>← 上一页</lgray>
+    Slots: '36'
+    Type: page_previous
+  next_page_:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: f32ca66056b72863e98f7f32bd7d94c7a0d796af691c9ac3a9136331352288f9
+      Name: <lgray>下一页 →</lgray>
+    Slots: '44'
+    Type: page_next
+  items_order:
+    Priority: 10
+    Item:
+      Material: NAME_TAG
+      Name: <lblue><b>物品排序</b></lblue>
+      Lore:
+      - '%orders%'
+      - ''
+      - <lgray><lblue>[▶]</lblue> 点击以<lblue>切换</lblue>。</lgray>
+    Slots: '45'
+    Type: listing_order
+  category:
+    Priority: 10
+    Item:
+      Material: COMPASS
+      Name: <lblue><b>分类</b></lblue>
+      Lore:
+      - '%categories%'
+      - ''
+      - <lgray><lblue>[▶]</lblue> 点击以<lblue>切换</lblue>。</lgray>
+    Slots: '46'
+    Type: category_filter
+  currency_filter:
+    Priority: 10
+    Item:
+      Material: EMERALD
+      Name: <lblue><b>货币筛选</b></lblue>
+      Lore:
+      - '%currencies%'
+      - ''
+      - <lgray><lblue>[▶]</lblue> 点击以<lblue>切换</lblue>。</lgray>
+      - <lgray><lblue>[▶]</lblue> Shift-右键点击以<lblue>重置</lblue>。</lgray>
+    Slots: '47'
+    Type: currency_filter
+  my_items:
+    Priority: 10
+    Item:
+      Material: BOOK
+      Name: <lyellow><b>我的拍卖</b></lyellow>
+      Lore:
+      - <lgray>您的拍卖物品列表。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '49'
+    Type: own_listings
+  unclaimed_items_unclaimed_amount:
+    Priority: 10
+    Item:
+      Material: GOLD_NUGGET
+      Name: <lorange><b>未领取物品</b></lorange> <lgray>[<white>%unclaimed_amount%</white>]</lgray>
+      Lore:
+      - <lgray>已售出但未领取的物品，</lgray>
+      - <lgray>如果未领取，将等待最终移除。</lgray>
+      - ''
+      - <lgray><lorange>[▶]</lorange> 点击以<lorange>更改</lorange>。</lgray>
+    Slots: '51'
+    Type: unclaimed_items
+  expired_items_expired_amount:
+    Priority: 10
+    Item:
+      Material: HOPPER
+      Name: <lred><b>过期物品</b></lred> <lgray>[<white>%expired_amount%</white>]</lgray>
+      Lore:
+      - <lgray>未在时间内售出的物品，</lgray>
+      - <lgray>如果未领取，将等待最终移除。</lgray>
+      - ''
+      - <lgray><lred>[▶]</lred> 点击以<lred>更改</lred>。</lgray>
+    Slots: '52'
+    Type: expired_listings
+  sales_history_history_amount:
+    Priority: 10
+    Item:
+      Material: WRITABLE_BOOK
+      Name: <lgreen><b>销售历史</b></lgreen> <lgray>[<white>%history_amount%</white>]</lgray>
+      Lore:
+      - <lgray>已售出物品的列表。</lgray>
+      - ''
+      - <lgray><lgreen>[▶]</lgreen> 点击以<lgreen>更改</lgreen>。</lgray>
+    Slots: '53'
+    Type: sales_history
+  info:
+    Priority: 10
+    Item:
+      Material: LECTERN
+      Name: <lyellow><b>信息</b></lyellow>
+      Lore:
+      - <lyellow><b>创建拍卖（出售物品）：</b></lyellow>
+      - <lyellow>▸ <lgray>手持需要拍卖的物品。</lgray>
+      - <lyellow>▸ <lgray>使用命令 /ah sell <出售价格></lgray>
+      - <lyellow>▸ <lgray>选择一种货币。</lgray>
+      - ''
+      - <lyellow><b>物品过期：</b></lyellow>
+      - <lgray>未售出和未领取的物品将在<lorange>%expire%</lorange>后</lgray>
+      - <lgray>从拍卖中清除。</lgray>
+      - ''
+      - <lyellow><b>税收：</b></lyellow>
+      - <lgray>添加物品到拍卖时，有<lyellow>%tax%%</lyellow>的税收</lgray>
+      - <lgray>基于物品价格。</lgray>
+    Slots: '40'
+    Type: default

@@ -1,0 +1,96 @@
+# ==================================================
+# 可用占位符：
+# - %balance% -> 玩家默认虚拟商店货币的余额。
+# - %sell_multiplier% -> 玩家的销售乘数（在VirtualShop settings.yml中设置）。
+# - https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders -> 商店，虚拟商店，静态/轮播商店的占位符。
+# - PlaceholderAPI -> 任何占位符。在插件配置中为GUI启用PlaceholderAPI。
+# ==================================================
+
+Settings:
+  # GUI标题。
+  Title: <black><b>%shop_name%</b></black>
+  # GUI大小。必须是9的倍数。
+  # 仅对'CHEST'库存类型有用。
+  Size: 54
+  # GUI类型。
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # 设置GUI自动刷新间隔（秒）。设置为0以禁用。
+  Auto_Refresh: 0
+# ==================== GUI CONTENT ====================
+# 您可以自由编辑此部分中的项目（添加、移除、修改项目）。
+# 以下值可用作按钮类型：
+# CLOSE
+# PAGE_NEXT
+# PAGE_PREVIOUS
+# RETURN
+# SELL_ALL
+# ==================== ITEM OPTIONS ====================
+# > Item: 要显示的项目。请检查：https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: 按钮优先级。较好的值将覆盖同一插槽中的其他项目。
+# > Slots: 按钮插槽。从 [0] 到 [Size - 1]。用逗号分隔。
+# > Click_Commands: 点击时执行自定义命令。此处可用PlaceholderAPI。
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  black_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: BLACK_STAINED_GLASS_PANE
+    Slots: 45,46,47,48,49,50,51,52,53
+    Type: default
+  return:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: be9ae7a4be65fcbaee65181389a2f7d47e2e326db59ea3eb789a92c85ea46
+      Name: <lgray><b>返回</b></lgray>
+    Slots: '49'
+    Type: return
+  _previous_page:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 86971dd881dbaf4fd6bcaa93614493c612f869641ed59d1c9363a3666a5fa6
+      Name: <lgray>← 上一页</lgray>
+    Slots: '48'
+    Type: page_previous
+  next_page_:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: f32ca66056b72863e98f7f32bd7d94c7a0d796af691c9ac3a9136331352288f9
+      Name: <lgray>下一页 →</lgray>
+    Slots: '50'
+    Type: page_next
+  wallet:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 5f96717bef61c37ce4dcd0b067da4b57c8a1b0f83c2926868b083444f7eade54
+      Name: <lyellow><b>钱包</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>余额: </lgray>%balance%</lyellow>'
+    Slots: '46'
+    Type: default
+  sell_all:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 9fd108383dfa5b02e86635609541520e4e158952d68c1c8f8f200ec7e88642d
+      Name: <lyellow><b>出售全部</b></lyellow>
+      Lore:
+      - <lgray>将您的所有物品</lgray>
+      - <lgray>出售给这家商店。</lgray>
+      - ''
+      - '<lyellow>▪ <lgray>出售乘数: </lgray>x%sell_multiplier%</lyellow>'
+      - ''
+      - <lyellow>[▶]</lyellow><lgray> 点击以<lyellow>出售全部</lyellow>。</lgray>
+    Slots: '52'
+    Type: sell_all

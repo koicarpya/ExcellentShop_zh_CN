@@ -1,0 +1,15 @@
+Name: <lpink><b>和平生物战利品</b></lpink>
+Description:
+- <gray>与和平生物及其战利品相关的一切。</gray>
+Permission_Required: false
+Layout:
+  Name: default
+Citizens:
+  Attached_NPC: ''
+Transaction_Allowed:
+  SELL: true
+  BUY: true
+Pages: 3
+Icon:
+  Material: PLAYER_HEAD
+  SkinURL: 9b1760e3778f8087046b86bec6a0a83a567625f30f0d6bce866d4bed95dba6c1

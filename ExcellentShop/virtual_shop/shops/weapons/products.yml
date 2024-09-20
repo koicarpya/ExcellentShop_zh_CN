@@ -1,0 +1,991 @@
+List:
+  leather_helmet:
+    Handler: bukkit_item
+    Content:
+      Preview: 2g0001g01b3dtqmst000000220009km800odlkmspb3e9gmct1qdhim2t38clp5uq35dhmmat00
+      Item: 2g0001g01b3dtqmst000000220009km800odlkmspb3e9gmct1qdhim2t38clp5uq35dhmmat00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 1
+      Page: 2
+  golden_helmet:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79jmur34cln5uq35dhmmat00
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79jmur34cln5uq35dhmmat00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 2
+      Page: 2
+  shield:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg010rb9dpim6sj1cpq3ksr8d5imop00
+      Item: 500003002m6rrldpq00000044000j9cg010rb9dpim6sj1cpq3ksr8d5imop00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 4
+      Page: 1
+  diamond_helmet:
+    Handler: bukkit_item
+    Content:
+      Preview: 2g0001g01b3dtqmst000000220009km800odlkmspb3e9gmct1qchkm2rbfdpi5uq35dhmmat00
+      Item: 2g0001g01b3dtqmst000000220009km800odlkmspb3e9gmct1qchkm2rbfdpi5uq35dhmmat00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 4
+      Page: 2
+  chainmail_helmet:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01krb9dpim6sj1cpq3kor8c5kmsrb1d5m5uq35dhmmat00
+      Item: 500003002m6rrldpq00000044000j9cg01krb9dpim6sj1cpq3kor8c5kmsrb1d5m5uq35dhmmat00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 6
+      Page: 2
+  iron_helmet:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3kqbidtn5uq35dhmmat00
+      Item: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3kqbidtn5uq35dhmmat00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 7
+      Page: 2
+  leather_chestplate:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip003hmmirj5cdp62pjk79m6aobkd1in4nr3d1in6t3gdhgn8p80
+      Item: a00006005cdnnarjk000000880016ip003hmmirj5cdp62pjk79m6aobkd1in4nr3d1in6t3gdhgn8p80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 10
+      Page: 2
+  golden_chestplate:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400dmqqbeclhn4ob6egt6errcchimsnr3d1in6t3gdhgn8p80
+      Item: 180000o00lhmutbeeg00000110004qb400dmqqbeclhn4ob6egt6errcchimsnr3d1in6t3gdhgn8p80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 11
+      Page: 2
+  bow:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip001lmmirj5cdp62pjk79h6uto0
+      Item: a00006005cdnnarjk000000880016ip001lmmirj5cdp62pjk79h6uto0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 12
+      Page: 1
+  arrow:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ej1e9p6uto0
+      Item: k0000c00aorfeln78000000gg002d5i003rdd5n6aoric5j78ej1e9p6uto0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 13
+      Page: 1
+  diamond_chestplate:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip003hmmirj5cdp62pjk79i6iobddtn68nr3d1in6t3gdhgn8p80
+      Item: a00006005cdnnarjk000000880016ip003hmmirj5cdp62pjk79i6iobddtn68nr3d1in6t3gdhgn8p80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 13
+      Page: 2
+  crossbow:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip0029mmirj5cdp62pjk79hn4rrjedh6uto0
+      Item: a00006005cdnnarjk000000880016ip0029mmirj5cdp62pjk79hn4rrjedh6uto0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 14
+      Page: 1
+  chainmail_chestplate:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i007jdd5n6aoric5j78ej3d1gmirjdc5kmonr3d1in6t3gdhgn8p80
+      Item: k0000c00aorfeln78000000gg002d5i007jdd5n6aoric5j78ej3d1gmirjdc5kmonr3d1in6t3gdhgn8p80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 15
+      Page: 2
+  iron_chestplate:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i006bdd5n6aoric5j78ej9e9nmsnr3d1in6t3gdhgn8p80
+      Item: k0000c00aorfeln78000000gg002d5i006bdd5n6aoric5j78ej9e9nmsnr3d1in6t3gdhgn8p80
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 16
+      Page: 2
+  leather_leggings:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01krb9dpim6sj1cpq3kr35c5q6gpbibtm6apr7d5n6eso0
+      Item: 500003002m6rrldpq00000044000j9cg01krb9dpim6sj1cpq3kr35c5q6gpbibtm6apr7d5n6eso0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 19
+      Page: 2
+  wooden_sword:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt7errfchimsnrjetnn4p00
+      Item: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt7errfchimsnrjetnn4p00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 20
+      Page: 1
+  golden_leggings:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i006bdd5n6aoric5j78ej7dtm68pbebtm6apr7d5n6eso0
+      Item: k0000c00aorfeln78000000gg002d5i006bdd5n6aoric5j78ej7dtm68pbebtm6apr7d5n6eso0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 20
+      Page: 2
+  stone_sword:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3ksrkdtn6anrjetnn4p00
+      Item: 500003002m6rrldpq00000044000j9cg01arb9dpim6sj1cpq3ksrkdtn6anrjetnn4p00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 21
+      Page: 1
+  golden_sword:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt6errcchimsnrjetnn4p00
+      Item: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt6errcchimsnrjetnn4p00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 22
+      Page: 1
+  diamond_leggings:
+    Handler: bukkit_item
+    Content:
+      Preview: 500003002m6rrldpq00000044000j9cg01krb9dpim6sj1cpq3kp39c5mmurj4btm6apr7d5n6eso0
+      Item: 500003002m6rrldpq00000044000j9cg01krb9dpim6sj1cpq3kp39c5mmurj4btm6apr7d5n6eso0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 22
+      Page: 2
+  iron_sword:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i0053dd5n6aoric5j78ej9e9nmsnrjetnn4p00
+      Item: k0000c00aorfeln78000000gg002d5i0053dd5n6aoric5j78ej9e9nmsnrjetnn4p00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 23
+      Page: 1
+  diamond_sword:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79i6iobddtn68nrjetnn4p00
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79i6iobddtn68nrjetnn4p00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 24
+      Page: 1
+  chainmail_leggings:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip003hmmirj5cdp62pjk79hmgob9dpmm2qbcbtm6apr7d5n6eso0
+      Item: a00006005cdnnarjk000000880016ip003hmmirj5cdp62pjk79hmgob9dpmm2qbcbtm6apr7d5n6eso0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 24
+      Page: 2
+  iron_leggings:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79kn4rrebtm6apr7d5n6eso0
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79kn4rrebtm6apr7d5n6eso0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 25
+      Page: 2
+  leather_boots:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79m6aobkd1in4nr2dtnn8so0
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79m6aobkd1in4nr2dtnn8so0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 28
+      Page: 2
+  golden_boots:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt6errcchimsnr2dtnn8so0
+      Item: 180000o00lhmutbeeg00000110004qb400b6qqbeclhn4ob6egt6errcchimsnr2dtnn8so0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 29
+      Page: 2
+  trident:
+    Handler: bukkit_item
+    Content:
+      Preview: 180000o00lhmutbeeg00000110004qb4008mqqbeclhn4ob6egt78sj9chimst00
+      Item: 180000o00lhmutbeeg00000110004qb4008mqqbeclhn4ob6egt78sj9chimst00
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 2000.0
+      BUY: 5000.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 31
+      Page: 1
+  diamond_boots:
+    Handler: bukkit_item
+    Content:
+      Preview: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79i6iobddtn68nr2dtnn8so0
+      Item: a00006005cdnnarjk000000880016ip002tmmirj5cdp62pjk79i6iobddtn68nr2dtnn8so0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 31
+      Page: 2
+  chainmail_boots:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i006bdd5n6aoric5j78ej3d1gmirjdc5kmonr2dtnn8so0
+      Item: k0000c00aorfeln78000000gg002d5i006bdd5n6aoric5j78ej3d1gmirjdc5kmonr2dtnn8so0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 33
+      Page: 2
+  iron_boots:
+    Handler: bukkit_item
+    Content:
+      Preview: k0000c00aorfeln78000000gg002d5i0053dd5n6aoric5j78ej9e9nmsnr2dtnn8so0
+      Item: k0000c00aorfeln78000000gg002d5i0053dd5n6aoric5j78ej9e9nmsnr2dtnn8so0
+    Item_Meta_Enabled: false
+    Allowed_Ranks: []
+    Required_Permissions: []
+    Currency: vault
+    Price:
+      Type: FLAT
+      SELL: 20.0
+      BUY: 50.0
+    Stock:
+      GLOBAL:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+      PLAYER:
+        BUY:
+          Initial_Amount: -1
+          Restock_Time: 0
+        SELL:
+          Initial_Amount: -1
+          Restock_Time: 0
+    Discount:
+      Allowed: false
+    Shop_View:
+      Slot: 34
+      Page: 2

@@ -1,0 +1,44 @@
+Custom_Item:
+  gold:
+    Name: 金锭
+    Format: '%price% %name%'
+    Icon:
+      Material: GOLD_INGOT
+    Item:
+      Material: GOLD_INGOT
+    Enabled: true
+  diamond:
+    Name: 钻石
+    Format: '%price% %name%'
+    Icon:
+      Material: DIAMOND
+    Item:
+      Material: DIAMOND
+    Enabled: true
+  emerald:
+    Name: 绿宝石
+    Format: '%price% %name%'
+    Icon:
+      Material: EMERALD
+    Item:
+      Material: EMERALD
+    Enabled: true
+Currencies:
+  exp:
+    Enabled: true
+    Name: 经验等级
+    Format: '%price% %name%'
+    Icon:
+      Material: EXPERIENCE_BOTTLE
+  xp:
+    Enabled: true
+    Name: 经验值
+    Format: '%price% %name%'
+    Icon:
+      Material: EXPERIENCE_BOTTLE
+  vault:
+    Enabled: true
+    Name: Money
+    Format: $%price%
+    Icon:
+      Material: GOLD_NUGGET

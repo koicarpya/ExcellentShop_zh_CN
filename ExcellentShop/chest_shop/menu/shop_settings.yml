@@ -1,0 +1,147 @@
+Settings:
+  # GUI标题。
+  Title: <black><b>%shop_name%</b></black>
+  # GUI大小。必须是9的倍数。
+  # 仅对'CHEST'库存类型有用。
+  Size: 9
+  # GUI类型。
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # 设置GUI自动刷新间隔（秒）。设置为0以禁用。
+  Auto_Refresh: 0
+# ==================== GUI CONTENT ====================
+# 您可以自由编辑此部分中的项目（添加、移除、修改项目）。
+# 以下值可用作按钮类型：
+# CLOSE
+# SHOP_BANK
+# SHOP_CHANGE_NAME
+# SHOP_CHANGE_PRODUCTS
+# SHOP_CHANGE_TRANSACTIONS
+# SHOP_CHANGE_TYPE
+# SHOP_DELETE
+# SHOP_DISPLAY
+# SHOP_STORAGE
+# ==================== ITEM OPTIONS ====================
+# > Item: 要显示的项目。请检查：https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+# > Priority: 按钮优先级。较好的值将覆盖同一插槽中的其他项目。
+# > Slots: 按钮插槽。从 [0] 到 [Size - 1]。用逗号分隔。
+# > Click_Commands: 点击时执行自定义命令。此处可用PlaceholderAPI。
+#     Available click types: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, NUMBER_1, NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_5, NUMBER_6, NUMBER_7, NUMBER_8, NUMBER_9
+#     Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: menu open shops
+# ==================================================
+Content:
+  display_name:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: f5a19af0e61ca42532c0599fa0a391753df6b71f9fa4a177f1aa9b1d81fe6ee2
+      Name: <lyellow><b>显示名称</b></lyellow>
+      Lore:
+      - '<lyellow>✔ <lgray>当前: </lgray>%shop_name%</lyellow>'
+      - ''
+      - <lgray>给您的商店命名！</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '0'
+    Type: shop_change_name
+  products:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 900d28ff7b543dd088d004b1b1f95b38d444ea0461ff5ae3c68d76c0c16e2527
+      Name: <lyellow><b>商品</b></lyellow>
+      Lore:
+      - <lgray>在这里管理您的商品！</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '1'
+    Type: shop_change_products
+  bank:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 5f96717bef61c37ce4dcd0b067da4b57c8a1b0f83c2926868b083444f7eade54
+      Name: <lyellow><b>银行</b></lyellow>
+      Lore:
+      - '<lyellow>▪ <lgray>余额: </lgray>%shop_bank_balance%</lyellow>'
+      - ''
+      - <lgray>银行用来存储您的资金。</lgray>
+      - ''
+      - <lgray>银行在销售时<lgreen>增加</lgreen>资金，</lgray>
+      - <lgray>并在购买时<lred>花费</lred>它们。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '2'
+    Type: shop_bank
+  storage:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: edc36c9cb50a527aa55607a0df7185ad20aabaa903e8d9abfc78260705540def
+      Name: <lyellow><b>存储</b></lyellow>
+      Lore:
+      - <lgray>在这里存放商品。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '3'
+    Type: shop_storage
+  display_settings:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: 28a47804b73e454a5992cf6411a7872df56788237c246bb245199d30a1eed58e
+      Name: <lyellow><b>展示设置</b></lyellow>
+      Lore:
+      - <lgray>自定义您的商店展示！</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '4'
+    Type: shop_display
+  trade_modes:
+    Priority: 10
+    Item:
+      Material: WRITABLE_BOOK
+      Name: <lyellow><b>交易模式</b></lyellow>
+      Lore:
+      - '<lyellow>✔ <lgray>购买: </lgray>%shop_buy_allowed%</lyellow>'
+      - '<lyellow>✔ <lgray>销售: </lgray>%shop_sell_allowed%</lyellow>'
+      - ''
+      - <lgray>启用/禁用商店中的某些操作。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 左键点击以切换<lyellow>购买</lyellow>。</lgray>
+      - <lgray><lyellow>[▶]</lyellow> 右键点击以切换<lyellow>销售</lyellow>。</lgray>
+    Slots: '5'
+    Type: shop_change_transactions
+  shop_type:
+    Priority: 10
+    Item:
+      Material: RED_BANNER
+      Name: <lyellow><b>商店类型</b></lyellow>
+      Lore:
+      - '<lyellow>✔ <lgray>当前: </lgray>%shop_type%</lyellow>'
+      - ''
+      - <lgray>将商店设置为<lyellow>管理员商店</lyellow>将</lgray>
+      - <lgray>使其拥有无限的资金和商品。</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 点击以<lyellow>更改</lyellow>。</lgray>
+    Slots: '6'
+    Type: shop_change_type
+  destroy_shop:
+    Priority: 10
+    Item:
+      Material: PLAYER_HEAD
+      SkinURL: b465f80bf02b408885987b00957ca5e9eb874c3fa88305099597a333a336ee15
+      Name: <lyellow><b>销毁商店</b></lyellow>
+      Lore:
+      - <lgray>永久移除商店。</lgray>
+      - ''
+      - <lgray><lred>[❗]</lred> 您必须先移除所有商品！</lgray>
+      - ''
+      - <lgray><lyellow>[▶]</lyellow> 潜行 + 点击以<lyellow>确认</lyellow>。</lgray>
+    Slots: '8'
+    Type: shop_delete
