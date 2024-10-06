@@ -318,38 +318,55 @@ Display:
     # 玩家可用的商店展示物品列表。
     Showcases:
       glass:
+        Name: <lgray>玻璃</lgray>
         Material: GLASS
       blue_glass:
+        Name: <lgray>蓝色玻璃</lgray>
         Material: BLUE_STAINED_GLASS
       black_glass:
+        Name: <lgray>黑色玻璃</lgray>
         Material: BLACK_STAINED_GLASS
       gray_glass:
+        Name: <lgray>灰色玻璃</lgray>
         Material: GRAY_STAINED_GLASS
       white_glass:
+        Name: <lgray>白色玻璃</lgray>
         Material: WHITE_STAINED_GLASS
       purple_glass:
+        Name: <lgray>紫色玻璃</lgray>
         Material: PURPLE_STAINED_GLASS
       light_gray_glass:
+        Name: <lgray>淡灰色玻璃</lgray>
         Material: LIGHT_GRAY_STAINED_GLASS
       orange_glass:
+        Name: <lgray>橙色玻璃</lgray>
         Material: ORANGE_STAINED_GLASS
       lime_glass:
+        Name: <lgray>黄蓝色玻璃</lgray>
         Material: LIME_STAINED_GLASS
       light_blue_glass:
+        Name: <lgray>淡蓝色玻璃</lgray>
         Material: LIGHT_BLUE_STAINED_GLASS
       brown_glass:
+        Name: <lgray>棕色玻璃</lgray>
         Material: BROWN_STAINED_GLASS
       green_glass:
+        Name: <lgray>绿色玻璃</lgray>
         Material: GREEN_STAINED_GLASS
       red_glass:
+        Name: <lgray>红色玻璃</lgray>
         Material: RED_STAINED_GLASS
       cyan_glass:
+        Name: <lgray>青色玻璃</lgray>
         Material: CYAN_STAINED_GLASS
       pink_glass:
+        Name: <lgray>粉红色玻璃</lgray>
         Material: PINK_STAINED_GLASS
       magenta_glass:
+        Name: <lgray>品红色玻璃</lgray>
         Material: MAGENTA_STAINED_GLASS
       yellow_glass:
+        Name: <lgray>黄色玻璃</lgray>
         Material: YELLOW_STAINED_GLASS
   # 定义商店展示的更新间隔（秒）。
   Update_Interval: 3
