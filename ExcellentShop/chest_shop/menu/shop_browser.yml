@@ -1,0 +1,147 @@
+# ==================== [SECTION] 设置 ====================
+# > [MenuType] : String | 菜单类型。可用值：https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : String | 菜单标题
+# > [Auto_Refresh] : Integer | 自动刷新间隔（秒），设为 0 关闭
+# > [PlaceholderAPI -> Enabled] : Boolean | 启用后按玩家解析所有物品的 PlaceholderAPI 变量
+#
+# ==================== [SECTION] 内容 ====================
+# 可自由增删或修改本节中的物品
+# > [Item] : 配置段 | 物品设置
+#     [*] 详见：https://nightexpressdev.com/nightcore/configuration/item-formation/
+# > [Priority] : Integer | 物品优先级，数值高者覆盖同槽位其他物品
+# > [Slots] : 整数列表 | 物品槽位，从 0 开始，用逗号分隔
+#     Slots: '0,4,9,10'
+# > [Type] : String | 点击动作类型
+#     [*] 可用：['close','page_next','page_previous','search_item','sorting','return']
+# > [Click_Commands] : 配置段 | 点击时执行指令，支持 PlaceholderAPI
+#     [*] 仅当 [Type] 为空时生效
+#     [*] 支持点击类型：[LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] 使用前缀 'player:' 以玩家身份执行
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+
+Settings:
+  MenuType: generic_9x6
+  Title: <black>商店浏览器</black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+
+Shop:
+  SortLocale:
+    OWNER_NAME: 店主姓名
+    SHOP_NAME: 商店名称
+  UseProductIcon: true
+  Slots: 10,11,12,13,14,15,16,19,20,21,22,23,24,25,28,29,30,31,32,33,34
+  Name: '%shop_name%'
+  Lore:
+    Own:
+    - '<gray><lyellow>➥ </lyellow>位置: <lyellow>%shop_location_x%</lyellow>, <lyellow>%shop_location_y%</lyellow>, <lyellow>%shop_location_z%</lyellow> 位于 <lyellow>%shop_location_world%</lyellow></gray>'
+    - '<gray><lyellow>➥ </lyellow>店主: <lyellow>%shop_owner%</lyellow></gray> <lgreen>(您)</lgreen>'
+    - '%empty-if-below%'
+    - '%products%'
+    - '%empty-if-above%'
+    - <lyellow>→ <u>点击传送</u></lyellow>
+    Others:
+    - '<gray><lyellow>➥ </lyellow>位置: <lyellow>%shop_location_x%</lyellow>, <lyellow>%shop_location_y%</lyellow>, <lyellow>%shop_location_z%</lyellow> 位于 <lyellow>%shop_location_world%</lyellow></gray>'
+    - '<gray><lyellow>➥ </lyellow>店主: <lyellow>%shop_owner%</lyellow></gray>'
+    - '%empty-if-below%'
+    - '%products%'
+    - '%empty-if-above%'
+    - <lyellow>→ <u>点击传送</u></lyellow>
+  ProductInfo:
+    DisplayLimit: 3
+    Entry:
+    - '<gray><white>%product_unit_amount%x %product_preview_name%</white> (<green>%product_price_buy_formatted%</green> : <red>%product_price_sell_formatted%</red>)</gray>'
+
+Title:
+  Own: <black>我的商店</black>
+  Player: <black>%player_name% 的商店</black>
+  ItemSearch: <black>包含 '%item%' 的商店</black>
+
+Content:
+  search_item:
+    Priority: 10
+    Item:
+      Material: minecraft:compass
+      Display_Name: <lyellow><b>搜索物品</b></lyellow>
+      Lore:
+      - <gray>搜索包含特定物品</gray>
+      - <gray>的商店</gray>
+      - ''
+      - <lyellow>→ <u>点击搜索</u></lyellow>
+      Hide_Components: true
+    Slots: '46'
+    Type: search_item
+
+  sorting:
+    Priority: 10
+    Item:
+      Material: minecraft:comparator
+      Display_Name: <lred><b>排序方式</b></lred>
+      Lore:
+      - '<lred>➥ <gray>当前: </gray>%type%</lred>'
+      - ''
+      - <gray>修改商店排序方式</gray>
+      - ''
+      - <lred>→ <u>点击切换</u></lred>
+      Hide_Components: true
+    Slots: '52'
+    Type: sorting
+
+  black_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: minecraft:black_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 45,46,47,48,49,50,51,52,53
+    Type: 'null'
+
+  return:
+    Priority: 10
+    Item:
+      Material: minecraft:iron_door
+      Display_Name: <white><u>返回</u></white>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '49'
+    Type: return
+
+  close:
+    Priority: 1
+    Item:
+      Material: minecraft:iron_door
+      Display_Name: <lred><u>退出</u></lred>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '49'
+    Type: close
+
+  page_next:
+    Priority: 0
+    Item:
+      Material: minecraft:arrow
+      Display_Name: <lyellow><u>下一页</u> →</lyellow>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '26'
+    Type: page_next
+
+  page_previous:
+    Priority: 0
+    Item:
+      Material: minecraft:arrow
+      Display_Name: <lyellow>← <u>上一页</u></lyellow>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '18'
+    Type: page_previous

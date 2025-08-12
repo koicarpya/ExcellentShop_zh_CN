@@ -1,0 +1,12 @@
+General:
+  # 已禁用的货币列表
+  Disabled_Currencies:
+  - currency1
+  - currency2
+  # 已禁用的自定义物品插件处理器列表
+  Disabled_ItemHandlers:
+  - CustomSuperItems
+  - UltimateItemsPlugin
+  # 是否对货币的 'Format' 设置应用 PlaceholderAPI 占位符
+  # 允许您使用 Oraxen 或 ItemsAdder 的自定义图片，以及其他与玩家无关的占位符
+  PlaceholderAPI_In_Format: true

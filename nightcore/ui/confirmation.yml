@@ -1,0 +1,51 @@
+# ==================== [设置部分] ====================
+# > [MenuType] : 字符串 | 菜单类型。允许的值：https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : 字符串 | 设置菜单标题。
+# > [Auto_Refresh] : 整数 | 菜单自动刷新间隔（秒）。设为 0 关闭。
+# > [PlaceholderAPI -> Enabled] : 布尔值 | 启用后，所有物品将按玩家应用 PlaceholderAPI 占位符。
+#  
+# ==================== [内容部分] ====================
+# 您可以根据需要自由编辑本部分的物品（增删改）。
+# > [Item] : 配置节 | 要显示的物品。
+#     [*] 可用选项列表：https://nightexpressdev.com/nightcore/configuration/item-formation/
+# > [Priority] : 整数 | 物品优先级。数值高的会覆盖同槽位其他物品。
+# > [Slots] : 整数数组 | 物品所在槽位，从 0 开始，逗号分隔。
+#     Slots: '0,4,9,10'
+# > [Type] : 字符串 | 定义物品点击行为。
+#     [*] 可用类型：['close', 'decline', 'accept']
+# > [Click_Commands] : 配置节 | 点击时执行命令，支持 PlaceholderAPI。
+#     [*] 仅当 [Type] 未设置时生效。
+#     [*] 可用点击类型：[LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] 使用前缀 'player:' 让玩家执行命令。
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+Settings:
+  MenuType: hopper
+  Title: <black>确定吗？</black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+  IconSlot: 2
+Content:
+  decline:
+    Priority: 10
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lred><b>取消</b></lred>
+      Lore: []
+      SkinURL: 27548362a24c0fa8453e4d93e68c5969ddbde57bf6666c0319c1ed1e84d89065
+    Slots: '0'
+    Type: decline
+  accept:
+    Priority: 10
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lgreen><b>确认</b></lgreen>
+      Lore: []
+      SkinURL: a79a5c95ee17abfef45c8dc224189964944d560f19a44f19f8a46aef3fee4756
+    Slots: '4'
+    Type: accept

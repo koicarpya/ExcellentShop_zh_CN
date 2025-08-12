@@ -1,0 +1,128 @@
+# ==================== [SECTION] 设置 ====================
+# > [MenuType] : String | 菜单类型。可用值：https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : String | 菜单标题
+# > [Auto_Refresh] : Integer | 自动刷新间隔（秒），设为 0 关闭
+# > [PlaceholderAPI -> Enabled] : Boolean | 启用后按玩家解析所有物品的 PlaceholderAPI 变量
+#
+# ==================== [SECTION] 内容 ====================
+# 可自由增删或修改本节中的物品
+# > [Item] : 配置段 | 物品设置
+#     [*] 详见：https://nightexpressdev.com/nightcore/configuration/item-formation/
+# > [Priority] : Integer | 物品优先级，数值高者覆盖同槽位其他物品
+# > [Slots] : 整数列表 | 物品槽位，从 0 开始，用逗号分隔
+#     Slots: '0,4,9,10'
+# > [Type] : String | 定义点击动作
+#     [*] 可用：['close','page_next','page_previous','hologram_toggle','showcase_toggle','showcase_reset','return']
+# > [Click_Commands] : 配置段 | 点击时执行指令，支持 PlaceholderAPI
+#     [*] 仅当 [Type] 为空时生效
+#     [*] 支持点击类型：[LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] 使用前缀 'player:' 以玩家身份执行
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+Settings:
+  MenuType: generic_9x6
+  Title: <black>外观设置</black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+
+Showcase:
+  Disabled:
+    Material: minecraft:gray_dye
+    Display_Name: <dgray>%type%</dgray>
+    Lore:
+    - <gray>启用展示台后可选择外观样式。</gray>
+  Lore:
+  - <white>→ <u>点击选择</u></white>
+  Slots: 10,11,12,13,14,15,16,19,20,21,22,23,24,25,28,29,30,31,32,33,34
+
+Content:
+  hologram_toggle:
+    Priority: 10
+    Item:
+      Material: minecraft:armor_stand
+      Display_Name: <lyellow><b>悬浮字</b></lyellow>
+      Lore:
+      - '<lyellow>➥ <gray>状态: </gray>%shop_hologram_enabled%</lyellow>'
+      - ''
+      - <gray>在商店上方显示悬浮字，</gray>
+      - <gray>包含商店名称与价格。</gray>
+      - ''
+      - <lyellow>→ <u>点击开关</u></lyellow>
+      Hide_Components: true
+    Slots: '47'
+    Type: hologram_toggle
+
+  showcase_toggle:
+    Priority: 10
+    Item:
+      Material: minecraft:beacon
+      Display_Name: <lcyan><b>展示台</b></lcyan>
+      Lore:
+      - '<lcyan>➥ <gray>状态: </gray>%shop_showcase_enabled%</lcyan>'
+      - ''
+      - <gray>在商店顶部展示商品模型。</gray>
+      - ''
+      - <lcyan>→ <u>点击开关</u></lcyan>
+      Hide_Components: true
+    Slots: '51'
+    Type: showcase_toggle
+
+  showcase_reset:
+    Priority: 10
+    Item:
+      Material: minecraft:barrier
+      Display_Name: <red><b>重置展示台</b></red>
+      Lore:
+      - <gray>将展示台恢复到默认外观。</gray>
+      - ''
+      - <red>→ <u>点击重置</u></red>
+      Hide_Components: true
+    Slots: '53'
+    Type: showcase_reset
+
+  black_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: minecraft:black_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 45,46,47,48,49,50,51,52,53
+    Type: 'null'
+
+  return:
+    Priority: 10
+    Item:
+      Material: minecraft:iron_door
+      Display_Name: <white><u>返回</u></white>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '49'
+    Type: return
+
+  page_next:
+    Priority: 0
+    Item:
+      Material: minecraft:arrow
+      Display_Name: <lyellow><u>下一页</u> →</lyellow>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '26'
+    Type: page_next
+
+  page_previous:
+    Priority: 0
+    Item:
+      Material: minecraft:arrow
+      Display_Name: <lyellow>← <u>上一页</u></lyellow>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '18'
+    Type: page_previous

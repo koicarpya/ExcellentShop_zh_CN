@@ -1,0 +1,13 @@
+Plugin:
+  # 插件本地化名称，用于消息及内部占位符。
+  Name: nightcore
+  # 插件前缀，用于消息。
+  Prefix: <lyellow><b>nightcore</b></lyellow><dgray> » </dgray><gray>
+  # 注册为主插件命令的命令名称。
+  # 不要留空，多个名称用逗号分隔。
+  Command_Aliases: nightcore,ncore
+  # 设置插件语言。
+  # 指定插件使用 /lang/ 子文件夹中的对应语言配置。
+  # 若指定语言不可用，则使用默认（英文）配置。
+  # [默认使用系统语言]
+  Language: cn

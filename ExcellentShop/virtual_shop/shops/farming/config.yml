@@ -1,21 +1,21 @@
-Name: 食物  # 商店名称
+Name: 农业  # 商店名称
 Description:  # 商店描述
-- <lgray>别饿着肚子！买一些</lgray>
-- <lgray>美味的食物来填饱肚子吧。</lgray>
+- <lgray>建造您自己的花园，</lgray>
+- <lgray>开始赚取您的金钱。</lgray>
 - ' '
-- <c:#ABE5A7>→ <b><u>点击</u></b> 浏览</c>
+- <c:#FFD05A>→ <b><u>点击</u></b> 浏览</c>
 Icon:  # 图标设置
   Material: minecraft:player_head  # 材质：玩家头颅
-  Display_Name: <c:#ABE5A7><b>食物</b></c>  # 显示名称
+  Display_Name: <c:#FFD05A><b>农业</b></c>  # 显示名称
   Lore: []  # 物品说明（空）
-  SkinURL: ca9c8753780ebc39c351da8efd91bce90bd8cca7b511f93e78df75f6615c79a6  # 皮肤URL
+  SkinURL: 26459be09998e50abd2ccf4cd383e6b38ab5bc905facb66dce0e14e038ba1968  # 皮肤URL
 Pages: 2  # 页面数量
 Permission_Required: false  # 是否需要权限
 Transaction_Allowed:  # 允许的交易类型
   BUY: true   # 允许购买
   SELL: true  # 允许出售
 MainMenu:  # 主菜单设置
-  Slot: 13  # 槽位编号
+  Slot: 30  # 槽位编号
 Aliases: []  # 别名（空）
 Layout:  # 布局设置
   Name: default  # 布局名称：默认

@@ -1,0 +1,279 @@
+Blocks:
+  blue_shulker_box:
+    Type: minecraft:blue_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: 47d0d86e1f1108468ac150dafa28e7d0619a6e3066cb42994bc6c1866bd267e3
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  barrel:
+    Type: minecraft:barrel
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: 5193c89d1df679854f33c2215247b676a159d5395392d0c61b8476f813d9edb0
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  black_shulker_box:
+    Type: minecraft:black_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: bf6174c01a67e1eada9db16bb551ddee32dfcbf37611382f88cdb1e62895bab2
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  white_shulker_box:
+    Type: minecraft:white_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: 7e066c569d4b94e49b23770e46c9a0e1d736711becb702809375e2d5a32f2a99
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  light_gray_shulker_box:
+    Type: minecraft:light_gray_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: 56a48c4037343731bd5fd1510ca15c573788389f258677a17f014e08aeaa9560
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  magenta_shulker_box:
+    Type: minecraft:magenta_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: 83524237183c2ba221ba61923a7130099e37166227cacb1f65cec93b6c33a6a8
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  light_blue_shulker_box:
+    Type: minecraft:light_blue_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: dbcf2e5a0ee72bbd63b08336918f11730120a49df3557cfa84ff6450fbc4c65c
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  shulker_box:
+    Type: minecraft:shulker_box
+    Item:
+      Material: minecraft:shulker_box
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  red_shulker_box:
+    Type: minecraft:red_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: 324aa7bf056ccd3d4e63197b04d89f0e9ba79fa6049c503029521724e234054a
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  chest:
+    Type: minecraft:chest
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: edc36c9cb50a527aa55607a0df7185ad20aabaa903e8d9abfc78260705540def
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  green_shulker_box:
+    Type: minecraft:green_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: efd8881d02fe9cee859ac597731b2df46bee6d52c446205f9da9dfa7bd111694
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  brown_shulker_box:
+    Type: minecraft:brown_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: b41956931d1f6d1d1b6f82f077b8a265b259f5d29f567869e9955cc6f9a82f12
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  trapped_chest:
+    Type: minecraft:trapped_chest
+    Item:
+      Material: minecraft:trapped_chest
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  orange_shulker_box:
+    Type: minecraft:orange_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: a83cbb7b98e1954dd2c007ea45975fc7fe1f6ebea7c12d75a578d0960f34996
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  pink_shulker_box:
+    Type: minecraft:pink_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: a374cf299874af600608acfb55169237fda244ccca0e23aa08c2e335bd73406b
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  yellow_shulker_box:
+    Type: minecraft:yellow_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: e780feff71541bf6eb4368e726f868871cc549f2599d45cc0e1c729825fee9df
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  purple_shulker_box:
+    Type: minecraft:purple_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: 30eed20b95873611c2b60e54f8df6f4e6654fb9575fc47e63f63327f9f6c56cf
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  lime_shulker_box:
+    Type: minecraft:lime_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: f45cf042172c9e4e7c8eea570ac8bbd76dc7d8d561ae0f7b60937b3bd4d92e19
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  cyan_shulker_box:
+    Type: minecraft:cyan_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: 101facfbdea4980bb0182dcf259341093e22b87375e70b849b88cfad17fc5b27
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []
+  gray_shulker_box:
+    Type: minecraft:gray_shulker_box
+    Item:
+      Material: minecraft:player_head
+      Display_Name: <lyellow><b>商店方块</b></lyellow> <gray>(<white>%type%</white>)</gray>
+      Lore:
+      - <gray>放置后可创建商店！</gray>
+      SkinURL: a95bde13c45754468cfc8c3a00133d997362fa7e302b0b0fbc4bd0fca6890059
+      Hide_Components: true
+    Showcase:
+      Name: '%type%'
+      DisplayBlock:
+        Material: minecraft:glass
+        Lore: []

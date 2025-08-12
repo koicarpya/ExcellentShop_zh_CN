@@ -12,7 +12,7 @@
 # > [Slots] : 整数数组 | 物品槽位，从0开始。用逗号分隔。
 #     Slots: '0,4,9,10'
 # > [Type] : 字符串 | 定义物品点击操作。
-#     [*] 可用类型: ['close', 'page_next', 'page_previous']
+#     [*] 可用类型: ['close', 'decline', 'accept']
 # > [Click_Commands] : 段落 | 点击时执行命令，支持PlaceholderAPI。
 #     [*] 仅在[Type]未设置（null）时有效。
 #     [*] 可用点击类型: [LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
@@ -24,49 +24,27 @@
 #       - player: warp shop
 # ==================================================
 Settings:
-  MenuType: generic_9x3
-  Title: <black>%shop_name%</black>
+  MenuType: hopper
+  Title: <black>您确定吗?</black>
   Auto_Refresh: -1
   PlaceholderAPI:
     Enabled: false
-Item:
-  Product_Slots: 10,13,16
 Content:
-  black_stained_glass_pane:
-    Priority: 0
-    Item:
-      Material: minecraft:black_stained_glass_pane
-      Lore: []
-      Hide_Tooltip: true
-    Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
-    Type: 'null'
-  firework_star:
-    Priority: 1
-    Item:
-      Material: minecraft:firework_star
-      Display_Name: <gray>缺货</gray>
-      Lore: []
-      Hide_Components: true
-      Color: 128,128,128
-    Slots: 10,13,16
-    Type: 'null'
-  page_next:
+  decline:
     Priority: 10
     Item:
-      Material: minecraft:arrow
-      Display_Name: <lyellow><u>下一页</u> →</lyellow>
-      Lore:
-      - '%empty-if-above%'
-      - '%empty-if-below%'
-    Slots: '26'
-    Type: page_next
-  page_previous:
+      Material: minecraft:player_head
+      Display_Name: <lred><b>取消</b></lred>
+      Lore: []
+      SkinURL: 27548362a24c0fa8453e4d93e68c5969ddbde57bf6666c0319c1ed1e84d89065
+    Slots: '0'
+    Type: decline
+  accept:
     Priority: 10
     Item:
-      Material: minecraft:arrow
-      Display_Name: <lyellow>← <u>上一页</u></lyellow>
-      Lore:
-      - '%empty-if-above%'
-      - '%empty-if-below%'
-    Slots: '18'
-    Type: page_previous
+      Material: minecraft:player_head
+      Display_Name: <lgreen><b>确认</b></lgreen>
+      Lore: []
+      SkinURL: a79a5c95ee17abfef45c8dc224189964944d560f19a44f19f8a46aef3fee4756
+    Slots: '4'
+    Type: accept

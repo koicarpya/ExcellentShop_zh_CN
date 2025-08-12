@@ -1,0 +1,150 @@
+# ==================== [SECTION] 设置 ====================
+# > [MenuType] : String | 菜单类型。可用值：https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : String | 菜单标题
+# > [Auto_Refresh] : Integer | 菜单自动刷新间隔（秒），设为 0 关闭
+# > [PlaceholderAPI -> Enabled] : Boolean | 启用后，所有物品将按玩家解析 PlaceholderAPI 变量
+#
+# ==================== [SECTION] 内容 ====================
+# 可自由增删或修改本节中的物品
+# > [Item] : 配置段 | 物品设置
+#     [*] 详见：https://nightexpressdev.com/nightcore/configuration/item-formation/
+# > [Priority] : Integer | 物品优先级，数值高者覆盖同槽位其他物品
+# > [Slots] : 整数列表 | 物品槽位，从 0 开始计数，用逗号分隔
+#     Slots: '0,4,9,10'
+# > [Type] : String | 点击动作类型
+#     [*] 可用：['close','page_next','page_previous','return','deposit_custom','deposit_all','withdraw_custom','withdraw_all']
+# > [Click_Commands] : 配置段 | 自定义点击指令，支持 PlaceholderAPI
+#     [*] 仅当 [Type] 为空时生效
+#     [*] 支持点击类型：[LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] 使用前缀 'player:' 以玩家身份执行
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+Settings:
+  MenuType: generic_9x6
+  Title: <black>商店银行</black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+
+Currency:
+  ItemSlots: 0,9,18,27,36
+  HighlightSlots: 1,10,19,28,37
+  Icon:
+    Highlight:
+      Material: minecraft:lime_stained_glass_pane
+      Display_Name: <green>← <b>已选货币</b></green>
+      Lore: []
+      Hide_Components: true
+  Name: '%currency_name%'
+  Lore:
+  - '<lyellow>➥ <gray>银行余额: </gray>%bank_balance%</lyellow>'
+  - '<lyellow>➥ <gray>手持余额: </gray>%player_balance%</lyellow>'
+
+Content:
+  close:
+    Priority: 1
+    Item:
+      Material: minecraft:iron_door
+      Display_Name: <lred><u>退出</u></lred>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '49'
+    Type: close
+
+  return:
+    Priority: 10
+    Item:
+      Material: minecraft:iron_door
+      Display_Name: <white><u>返回</u></white>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '49'
+    Type: return
+
+  black_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: minecraft:black_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 1,10,19,28,37,45,46,47,48,49,50,51,52,53
+    Type: 'null'
+
+  gray_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: minecraft:gray_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 0,9,18,27,36
+    Type: 'null'
+
+  deposit_custom:
+    Priority: 10
+    Item:
+      Material: minecraft:light_blue_bundle
+      Display_Name: <lblue><b>存款</b></lblue> <gray>[<white>自定义金额</white>]</gray>
+      Lore:
+      - '<lblue>➥ <gray>银行余额: </gray>%bank_balance%</lblue>'
+      - '<lblue>➥ <gray>手持余额: </gray>%player_balance%</lblue>'
+      - ''
+      - <gray>将 <lblue>指定金额</lblue> 存入商店银行</gray>
+      - ''
+      - <lblue>→ <u>点击存款</u></lblue>
+      Hide_Components: true
+    Slots: '13'
+    Type: deposit_custom
+
+  deposit_all:
+    Priority: 10
+    Item:
+      Material: minecraft:water_bucket
+      Display_Name: <lblue><b>存款</b></lblue> <gray>[<white>全部</white>]</gray>
+      Lore:
+      - '<lblue>➥ <gray>银行余额: </gray>%bank_balance%</lblue>'
+      - '<lblue>➥ <gray>手持余额: </gray>%player_balance%</lblue>'
+      - ''
+      - <gray>将 <lblue>全部</lblue> 货币存入银行</gray>
+      - ''
+      - <lblue>→ <u>点击存款</u></lblue>
+      Hide_Components: true
+    Slots: '14'
+    Type: deposit_all
+
+  withdraw_custom:
+    Priority: 10
+    Item:
+      Material: minecraft:orange_bundle
+      Display_Name: <lorange><b>取款</b></lorange> <gray>[<white>自定义金额</white>]</gray>
+      Lore:
+      - '<lorange>➥ <gray>银行余额: </gray>%bank_balance%</lorange>'
+      - '<lorange>➥ <gray>手持余额: </gray>%player_balance%</lorange>'
+      - ''
+      - <gray>从银行取出 <lorange>指定金额</lorange></gray>
+      - ''
+      - <lorange>→ <u>点击取款</u></lorange>
+      Hide_Components: true
+    Slots: '31'
+    Type: withdraw_custom
+
+  withdraw_all:
+    Priority: 10
+    Item:
+      Material: minecraft:lava_bucket
+      Display_Name: <lorange><b>取款</b></lorange> <gray>[<white>全部</white>]</gray>
+      Lore:
+      - '<lorange>➥ <gray>银行余额: </gray>%bank_balance%</lorange>'
+      - '<lorange>➥ <gray>手持余额: </gray>%player_balance%</lorange>'
+      - ''
+      - <gray>将 <lorange>全部</lorange> 银行余额取出</gray>
+      - ''
+      - <lorange>→ <u>点击取款</u></lorange>
+      Hide_Components: true
+    Slots: '32'
+    Type: withdraw_all

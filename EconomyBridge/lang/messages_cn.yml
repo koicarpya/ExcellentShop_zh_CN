@@ -1,0 +1,6 @@
+Command:
+  FromItem:
+    Desc: 从手中物品创建货币
+    Error:
+      NoItem: <lred>您必须手持一个物品！</lred>
+    Created: <lgray>已创建货币 <lyellow>%currency_name%</lyellow>，ID 为 <lyellow>%currency_id%</lyellow>。</lgray>

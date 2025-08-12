@@ -1,62 +1,74 @@
-Plugin:
-  # 插件的本地化名称。它用于消息和内部占位符。
-  Name: nightcore
-  # 插件前缀。用于消息。
-  Prefix: <lyellow><b>nightcore</b></lyellow><dgray> » </dgray><gray>
-  # 将注册为主要插件命令的命令名称。
-  # 不要留空。用逗号分隔多个名称。
-  Command_Aliases: nightcore,ncore
-  # 设置插件语言。
-  # 基本上它告诉插件使用'/lang/'子文件夹中的特定消息配置。
-  # 如果指定的语言不可用，将使用默认语言（英语）。
-  # [默认是系统区域设置]
-  Language: cn
 DataFixer:
-  # 当启用时，使用Mojang的DataFixer实用程序将ItemStacks从<= 1.20.4 NBT格式更新为1.20.5+ NBT格式。
-  # 重要说明：您只需要使用此设置一次！启用它，重启服务器并重新保存所有存储压缩项目数据的配置：商店、箱子等。
-  Enabled: true
-ModernTextFormation:
-  # 当启用时，在插件加载时解析（反序列化）语言消息为Spigot TextComponent(s)。
-  # 当禁用时，在将消息发送给玩家时，运行时解析（反序列化）语言文本为Spigot TextComponent(s)。
-  # 启用此设置对性能有好处，但带有占位符的消息将在运行时重新编译。
-  # （旁注）与NexEngine不同，它不再使用正则表达式，这使得反序列化显著更快且准确。
-  # [默认是true]
-  Precompile_Language: true
-  # 在这里您可以定义自定义颜色，以便在所有nightcore插件中使用，如<aqua>文本</aqua>。
-  # 您还可以覆盖默认颜色。
-  Default_Colors:
-    aqua: '#00ffff'
+  MissingVersion: 4189
+  UnknownVersion: 10000
 Menu:
-  # 设置GUI中玩家点击的冷却时间（以毫秒为单位）。
-  # [默认是150毫秒]
+  # 设置玩家在 GUI 中点击的冷却时间（毫秒）。
+  # [默认 150 毫秒]
   Click_Cooldown: 150
 UserData:
-  # 启用用户数据管理的调试消息。
-  # [默认是false]
-  Debug: false
   Cache:
-    # 设置离线用户数据将被缓存多长时间（以秒为单位）
-    # 直到被移除并需要从数据库重新加载。
-    # [默认是300（5分钟）]
+    # [已过时，已移至各插件的 engine.yml]
     LifeTime: 300
-    # 设置插件是否将缓存玩家名称和UUID。
-    # 这将提高数据库性能，当检查用户是否存在时，但将使用更多的内存来存储UUID和名称。
-    # [默认是true]
-    Names_And_UUIDs: true
+Time:
+  # 设置插件使用的时区，以便正确处理本地日期和时间。
+  TimeZone: Asia/Shanghai
 Engine:
-  # 允许在插件配置中使用旧版颜色代码（例如'&7', '&l', 等）。
-  # 此设置仅用于向后兼容！没有保证它将在未来更新中持续存在！
-  # 除非您需要为您的自定义语言配置和翻译添加支持，否则您不应该使用它。
-  # 您应该尽快迁移到新的文本格式：https://github.com/nulli0n/nightcore-spigot/wiki/Text-Formation
+  # 允许在插件配置文件中使用旧版颜色代码（如 '&7'、'&l' 等）。
+  # 此设置仅为向后兼容存在！未来更新不保证继续支持！
+  # 除非您确实需要为自定义语言配置和翻译支持旧代码，否则不应启用。
+  # 请尽快迁移到新的文本格式：https://nightexpressdev.com/nightcore/configuration/text-formation/
   Legacy_Color_Support: true
-  # 设置是否除了常规的'Player#getName'之外，还可以使用'Player#getDisplayName'来查找和获取玩家。
-  # 如果您想使用命令中的自定义玩家昵称，这很有用。
-  # （仅适用于基于nightcore的插件。）
-  # [默认是false]
-  Respect_Player_DisplayName: false
-  # 控制数值数据的格式化和舍入方式。
+Number:
+  # 控制数值数据的格式化与舍入方式。
   # 允许的模式：UP, DOWN, CEILING, FLOOR, HALF_UP, HALF_DOWN, HALF_EVEN, UNNECESSARY
-  # 教程可以在这里找到：https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html
-  Number_Format:
-    Format: '#,###.##'
-    Rounding: half_even
+  # 教程：https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html
+  Format:
+    Format: '#,###.###'
+    Rounding: HALF_EVEN
+    Locale: zh-CN
+  # 设置数字简写的步进倍数。
+  # 当数字将被压缩时，会除以该值来判断是否落入某个数字简写范围。
+  # [默认 1000]
+  Shortcut_Step: 1000
+  # 自定义数字简写。
+  Shortcut_List:
+    thousand:
+      Magnitude: 1
+      Name: k
+    million:
+      Magnitude: 2
+      Name: m
+    billion:
+      Magnitude: 3
+      Name: b
+    trillion:
+      Magnitude: 4
+      Name: t
+    quadrillion:
+      Magnitude: 5
+      Name: q
+Profiles:
+  Cache:
+    # 设置已缓存玩家档案的过期时间（分钟），过期后会向 Mojang API 请求更新名称与纹理。
+    # [*] 自定义头颅皮肤的档案不会更新。
+    # [*] 每次查询档案时重置过期时间。
+    # [*] 设为 -1 则直到服务器重启前不更新。
+    # [默认 360（6 小时）]
+    UpdateTime: 360
+    # 设置已缓存玩家档案的清理时间（分钟），过期后将从缓存与内存中移除。
+    # [*] 自定义头颅皮肤的档案不会被清理。
+    # [*] 每次查询档案时重置过期时间。
+    # [*] 设为 -1 则直到服务器重启前不清理。
+    # [默认 1440（24 小时）]
+    PurgeTime: 1440
+  # 每隔多少秒清理一次已缓存的玩家档案。
+  # [默认 600（10 分钟）]
+  PurgeInterval: 600
+  # 控制当档案所有者加入服务器时是否强制更新缓存的玩家档案。
+  # [默认 true]
+  UpdateOnJoin: true
+  # 控制带自定义纹理的档案是否可以查询 Mojang API 以获取缺失的属性。
+  # [*] 仅当遇到自定义头颅纹理加载问题时才启用。
+  # [*] 启用可能导致被 Mojang 限流。
+  # [默认 false]
+  FetchCustom: false

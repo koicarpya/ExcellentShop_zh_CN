@@ -1,0 +1,143 @@
+# ==================== [SECTION] 设置 ====================
+# > [MenuType] : String | 菜单类型。可用值：https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : String | 菜单标题
+# > [Auto_Refresh] : Integer | 自动刷新间隔（秒），设为 0 关闭
+# > [PlaceholderAPI -> Enabled] : Boolean | 启用后按玩家解析所有物品的 PlaceholderAPI 变量
+#
+# ==================== [SECTION] 内容 ====================
+# 可自由增删或修改本节中的物品
+# > [Item] : 配置段 | 物品设置
+#     [*] 详见：https://nightexpressdev.com/nightcore/configuration/item-formation/
+# > [Priority] : Integer | 物品优先级，数值高者覆盖同槽位其他物品
+# > [Slots] : 整数列表 | 物品槽位，从 0 开始，用逗号分隔
+#     Slots: '0,4,9,10'
+# > [Type] : String | 定义点击动作
+#     [*] 可用：['close','rent_off','rent_on','rent_duration','rent_price','rent_currency','rent_cancel','return','rent_enabled']
+# > [Click_Commands] : 配置段 | 点击时执行指令，支持 PlaceholderAPI
+#     [*] 仅当 [Type] 为空时生效
+#     [*] 支持点击类型：[LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] 使用前缀 'player:' 以玩家身份执行
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+Settings:
+  MenuType: generic_9x4
+  Title: <black>租赁设置</black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+
+Content:
+  rent_off:
+    Priority: 10
+    Item:
+      Material: minecraft:lime_dye
+      Display_Name: <green><b>租赁已启用</b></green>
+      Lore:
+      - <gray>其他玩家 <green>可以</green> 租赁此商店。</gray>
+      - ''
+      - <green>→ <u>点击关闭</u></green>
+      Hide_Components: true
+    Slots: '11'
+    Type: rent_off
+
+  rent_on:
+    Priority: 10
+    Item:
+      Material: minecraft:gray_dye
+      Display_Name: <red><b>租赁已禁用</b></red>
+      Lore:
+      - <gray>其他玩家 <red>无法</red> 租赁此商店。</gray>
+      - ''
+      - <red>→ <u>点击开启</u></red>
+      Hide_Components: true
+    Slots: '11'
+    Type: rent_on
+
+  rent_duration:
+    Priority: 10
+    Item:
+      Material: minecraft:clock
+      Display_Name: <yellow><b>租期</b></yellow>
+      Lore:
+      - '<yellow>➥ <gray>当前: </gray>%rent_duration%</yellow>'
+      - ''
+      - <gray>玩家首次租赁时的</gray>
+      - <gray>默认时长。</gray>
+      - ''
+      - <yellow>→ <u>点击修改</u></yellow>
+      Hide_Components: true
+    Slots: '13'
+    Type: rent_duration
+
+  rent_price:
+    Priority: 10
+    Item:
+      Material: minecraft:gold_nugget
+      Display_Name: <lyellow><b>租金</b></lyellow>
+      Lore:
+      - '<lyellow>➥ <gray>当前: </gray>%rent_price%</lyellow>'
+      - ''
+      - <gray>玩家租赁此商店</gray>
+      - <gray>所需支付的价格。</gray>
+      - ''
+      - <lyellow>→ <u>点击修改</u></lyellow>
+      Hide_Components: true
+    Slots: '15'
+    Type: rent_price
+
+  rent_currency:
+    Priority: 10
+    Item:
+      Material: minecraft:emerald
+      Display_Name: <lgreen><b>货币</b></lgreen>
+      Lore:
+      - '<lgreen>➥ <gray>当前: </gray>%rent_currency_name%</lgreen>'
+      - ''
+      - <gray>设置租赁商店所</gray>
+      - <gray>使用的货币。</gray>
+      - ''
+      - <lgreen>→ <u>点击修改</u></lgreen>
+      Hide_Components: true
+    Slots: '16'
+    Type: rent_currency
+
+  rent_cancel:
+    Priority: 10
+    Item:
+      Material: minecraft:barrier
+      Display_Name: <red><b>取消租赁</b></red>
+      Lore:
+      - '<red>➥ <gray>租赁者: </gray>%shop_rented_by%</red>'
+      - '<red>➥ <gray>剩余: </gray>%shop_rent_expires_in%</red>'
+      - ''
+      - <gray>取消当前租赁并</gray>
+      - <gray>收回商店权限。</gray>
+      - ''
+      - <red>→ <u>点击取消</u></red>
+      Hide_Components: true
+    Slots: '35'
+    Type: rent_cancel
+
+  return:
+    Priority: 10
+    Item:
+      Material: minecraft:iron_door
+      Display_Name: <white><u>返回</u></white>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '31'
+    Type: return
+
+  black_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: minecraft:black_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 27,28,29,30,31,32,33,34,35
+    Type: 'null'

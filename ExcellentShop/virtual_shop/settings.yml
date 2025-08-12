@@ -1,177 +1,184 @@
+_dataver: 414
 General:
-  # 设置虚拟商店模块的默认货币。
-  # 当您创建新商品或没有其他货币可用时，将使用此货币。
-  # 兼容插件: https://nightexpress.gitbook.io/excellentshop/features/multi-currency
-  Default_Currency: vault
-  # 设置默认的商品购买菜单配置。
-  # 您可以在/menu/product_carts/目录中创建和编辑购物车UI。
+  # 设置默认商品购买菜单配置。
+  # 您可以在/menu/product_carts/目录中创建和编辑购物车界面。
   Default_Cart_UI: default
-  # 设置是否虚拟商店将为购买和销售使用不同的购买菜单。
+  # 设置虚拟商店是否对购买和出售使用不同的购买菜单。
   Split_BuySell_Cart_UI: false
-  # 如果启用了分割选项，则设置购买的默认商品购买菜单配置。
-  # 您可以在/menu/product_carts/目录中创建和编辑购物车UI。
+  # 如果启用拆分选项，设置购买的默认商品购买菜单配置。
+  # 您可以在/menu/product_carts/目录中创建和编辑购物车界面。
   Default_Buy_Cart_UI: default
-  # 如果启用了分割选项，则设置销售的默认商品购买菜单配置。
-  # 您可以在/menu/product_carts/目录中创建和编辑购物车UI。
+  # 如果启用拆分选项，设置出售的默认商品购买菜单配置。
+  # 您可以在/menu/product_carts/目录中创建和编辑购物车界面。
   Default_Sell_Cart_UI: default
-  # 如果商店的配置不再存在，则设置默认商店布局配置。
+  # 设置默认商店布局配置，以防商店原有配置不再存在。
   Default_Layout: default
   Main_Menu:
     # 启用主菜单功能，您可以在其中列出所有虚拟商店。
     Enabled: true
-    # 当启用时，隐藏玩家无法访问的主菜单中的商店。
+    # 启用时，从主菜单中隐藏玩家无权访问的商店。
     Hide_No_Permission_Shops: true
   Shop_Shortcut:
-    # 启用商店快捷命令功能。允许快速打开商店。
+    # 启用商店快捷方式和商店别名命令功能。允许快速打开商店。
     Enabled: true
     # 快速主菜单和商店访问的命令别名。
     # 用逗号分隔。
-    # [*] 更改后需要重启！
     Commands: shop
   Sell_Menu:
-    # 当'true'时启用销售菜单功能，您可以在其中快速出售所有物品。
+    # 当为'true'时启用出售菜单功能，您可以在其中快速出售所有物品。
     Enabled: true
-    # 设置是否应该简化销售菜单。
-    # 当简化时，不执行项目和点击验证，因此菜单表现得像一个常规的箱子，
-    # 物品将在关闭而不是按钮点击时被出售。
+    # 设置出售菜单是否应该简化。
+    # 当简化时，不执行物品和点击验证，因此菜单就像普通箱子一样，
+    # 物品将在关闭时出售而不是按钮点击。
     Simplified: false
-    # 自定义命令别名以打开销售菜单。用逗号分隔它们。
-    # [*] 更改后需要重启！
+    # 打开出售菜单的自定义命令别名。用逗号分隔。
     Commands: sellgui,sellmenu
   Sell_All:
-    # 启用全部出售命令功能。
-    Enabled: true
-    # 全部出售命令别名。用逗号分隔。
-    # [*] 更改后需要重启！
+    # 启用一键出售命令功能。
+    Enabeled: true
+    # 一键出售命令别名。用逗号分隔。
     Commands: sellall
   Sell_Hand:
-    # 启用手持出售功能。
+    # 启用出售手持物功能。
     Enabled: true
-    # 手持出售命令别名。用逗号分隔。
-    # [*] 更改后需要重启！
+    # 出售手持物命令别名。用逗号分隔。
     Commands: sellhand
-  # 在此处您可以为特定等级定义出售乘数。
-  # 如果您想使用基于权限的系统，您可以使用 'excellentshop.virtual.sellmultiplier.[name]' 权限模式。
+  Sell_Hand_All:
+    # 启用出售所有手持物功能。
+    Enabled: true
+    # 出售所有手持物命令别名。用逗号分隔。
+    Commands: sellhandall
+  # 在这里您可以为特定等级定义出售倍率。
+  # 如果您想使用基于权限的系统，可以使用'excellentshop.virtual.sellmultiplier.[name]'权限模式。
   # (确保使用与您的权限等级不同的名称)
-  # 公式：'<sellPrice> * <sellMultiplier>'。因此，1.0 = 100%（无变化），1.5 = +50%，0.75 = -25%，等等。
+  # 公式: '<sellPrice> * <sellMultiplier>'。所以，1.0 = 100%（无变化），1.5 = +50%，0.75 = -25%，等等。
   Sell_Multipliers:
     # 可用值: RANK, PERMISSION
-    # ==================== RANK MODE ====================
+    # ==================== 等级模式 ====================
     # 通过玩家的权限组获取值。'Values'列表中的所有键将代表权限组名称。
-    # 如果玩家没有指定的组，则将使用'Default_Value'设置
+    # 如果玩家没有指定的任何组，则将使用'Default_Value'设置
     #   Values:
     #     vip: 1 # -> 玩家必须在'vip'权限组中。
     #     gold: 2 # -> 玩家必须在'gold'权限组中。
     #     emerald: 3 # -> 玩家必须在'emerald'权限组中。
     #
-    # ==================== PERMISSION MODE ====================
-    # 通过玩家的权限获取值。'Values'列表中的所有键将代表'Permission_Prefix'设置（见下文）的后缀。
-    # 如果玩家没有指定的权限，则将使用'Default_Value'设置
+    # ==================== 权限模式 ====================
+    # 通过玩家的权限获取值。'Values'列表中的所有键将代表'Permission_Prefix'设置的后缀（见下文）。
+    # 如果玩家没有指定的任何权限，则将使用'Default_Value'设置
     #   Permission_Prefix: 'example.prefix.'
     #   Values:
     #     vip: 1 # -> 玩家必须有'example.prefix.vip'权限。
     #     gold: 2 # -> 玩家必须有'example.prefix.gold'权限。
     #     emerald: 3 # -> 玩家必须有'example.prefix.emerald'权限。
     Mode: RANK
-    # 设置'PERMISSION'模式的权限前缀。
+    # 为'PERMISSION'模式设置权限前缀。
     Permission_Prefix: excellentshop.virtual.sellmultiplier.
     Default_Value: 1.0
     Values:
-      vip: 1.5
       gold: 2.0
-  # 玩家不能在指定的游戏模式中使用商店。
+      vip: 1.5
+  # 玩家不能在指定游戏模式下使用商店。
   # 可用值: CREATIVE, SURVIVAL, ADVENTURE, SPECTATOR
   Disabled_In_Gamemodes:
   - CREATIVE
-  # 玩家不能在指定的世界中使用商店。区分大小写。
+  # 玩家不能在指定世界中使用商店。区分大小写。
   Disabled_In_Worlds:
   - world_name
   - example_world123
+SellFeatures:
+  Containers:
+    # 控制'容器'物品的内容是否包含在一键出售、出售界面功能中，例如潜影盒、箱子等。
+    # [*] 尚不包括Bundle。
+    ContentIncluded: true
 GUI:
   Shop_Format:
-    # 设置主菜单中商店项目的显示名称。
-    # 您可以使用'虚拟商店'占位符:https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders
-    Name: '%shop_name%'
-    # 设置主菜单中商店项目的lore。
-    # 您可以使用'虚拟商店'占位符: https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders
+    # 为主菜单中的商店物品设置显示名称。
+    # 您可以使用'虚拟商店'占位符:https://nightexpressdev.com/excellentshop/placeholders
+    Name: '%shop_icon_name%'
+    # 为主菜单中的商店物品设置描述。
+    # 您可以使用'虚拟商店'占位符: https://nightexpressdev.com/excellentshop/placeholders
     Lore:
     - '%shop_description%'
   Product_Format:
     Lore:
-      # 商品lore格式。使用'%lore%'占位符插入商品项目的原始lore。
-      # 您可以使用'虚拟商品'占位符: https://nightexpress.gitbook.io/excellentshop/utility/placeholders#internal-placeholders
+      # 商品描述格式。使用'%lore%'占位符插入商品物品的原始描述。
+      # 您可以使用'虚拟商品'占位符: https://nightexpressdev.com/excellentshop/placeholders
       Main:
       - '%permission%'
       - '%discount%'
-      - ''
+      - '%empty-if-above%'
       - '%lore%'
-      - ''
+      - '%empty-if-above%'
       - '%buy%'
-      - ''
+      - '%empty-if-above%'
       - '%sell%'
-      - ''
+      - '%empty-if-above%'
       - <dgray>按住 <lgray>Shift</lgray> 快速购买和出售。</dgray>
-      # 如果商品可购买，将显示的lore。
+      # 如果商品可购买将出现的描述。
       # 占位符: %buy%
       Buy:
-      - <green><b>购买：</b></green>
+      - <green><b>购买:</b></green>
       - <green>←<white> 左键点击以 </white>%product_price_buy_formatted%<white> 购买</white></green>
-      - ''
+      - '%empty-if-below%'
       - '%price_dynamic_buy%'
-      - ''
+      - '%empty-if-above%'
       - '%stock_global_buy%'
       - '%stock_player_buy%'
-      # 如果商品可销售，将显示的文本。
+      # 如果商品可出售将出现的文本。
       # 占位符: %sell%
       Sell:
-      - <red><b>出售：</b></red>
+      - <red><b>出售:</b></red>
       - <red>→<white> 右键点击以 </white>%product_price_sell_formatted%<white> 出售</white></red>
       - <red>→<white> 按 [F] 以 </white>%product_price_sell_all_formatted%<white> 出售全部</white></red>
-      - ''
+      - '%empty-if-below%'
       - '%price_dynamic_sell%'
-      - ''
+      - '%empty-if-above%'
       - '%stock_global_sell%'
       - '%stock_player_sell%'
-      # 如果商品有活动折扣，将显示的文本。
-      # 插入占位符: %discount%
+      # 如果商品有有效折扣将出现的文本。
+      # 要插入的占位符: %discount%
       Discount:
       - <gray><green>✔</green> 折扣 <green><b>%product_discount_amount%%</b></green>!</gray>
-      # 如果玩家没有访问权限，将显示的文本。
-      # 插入占位符: %permission%
+      # 如果玩家无权访问商品将出现的文本。
+      # 要插入的占位符: %permission%
       NoPermission:
-      - <gray><red>✘</red> 您没有权限访问此商品！</gray>
-      # 当商品具有动态/浮动价格时显示的文本。
-      # 插入占位符:
+      - <gray><red>✘</red> 您无权访问此物品!</gray>
+      # 当商品具有动态/浮动价格时出现的文本。
+      # 要插入的占位符:
       # %price_dynamic_buy%
       # %price_dynamic_sell%
       PriceDynamics:
-        BUY:
-        - '<green>[?]<white> 平均: </white>%product_price_avg_buy%<white> | 动态: </white>%product_price_avg_diff_buy%</green>'
         SELL:
-        - '<red>[?]<white> 平均: </white>%product_price_avg_sell%<white> | 动态: </white>%product_price_avg_diff_sell%</red>'
+        - '<red>[?]<white> 平均价格: </white>%product_price_avg_sell%<white> | 动态: </white>%product_price_avg_diff_sell%</red>'
+        BUY:
+        - '<green>[?]<white> 平均价格: </white>%product_price_avg_buy%<white> | 动态: </white>%product_price_avg_diff_buy%</green>'
       Stock:
-        # 当商品配置了购买/销售库存时显示的文本。
-        # 插入占位符:
-        # %stock_global_buy%
-        # %stock_global_sell%
         GLOBAL:
+          # 当商品配置了购买/出售库存时出现的文本。
+          # 要插入的占位符:
+          # %stock_global_buy%
           BUY:
-          - '<green>● <white>库存: </white>%product_stock_global_buy_amount_left%<white>/</white>%product_stock_global_buy_amount_initial%</green><gray> (<white>%product_stock_global_buy_restock_date%</white>)</gray>'
+          - '<green>● <white>库存: </white>%product_stock_global_buy_amount_left%<white>/</white>%product_stock_global_buy_amount_initial%</green><gray> (<white>%product_stocks_restock_date%</white>)</gray>'
+          # 当商品配置了购买/出售库存时出现的文本。
+          # 要插入的占位符:
+          # %stock_global_sell%
           SELL:
-          - '<red>● <white>库存: </white>%product_stock_global_sell_amount_left%<white>/</white>%product_stock_global_sell_amount_initial%</red><gray> (<white>%product_stock_global_sell_restock_date%</white>)</gray>'
-        # 当商品配置了购买/销售限制时显示的文本。
-        # 插入占位符:
-        # %stock_player_buy%
-        # %stock_player_sell%
+          - '<red>● <white>库存: </white>%product_stock_global_sell_amount_left%<white>/</white>%product_stock_global_sell_amount_initial%</red><gray> (<white>%product_stocks_restock_date%</white>)</gray>'
         PLAYER:
+          # 当商品配置了购买/出售限制时出现的文本。
+          # 要插入的占位符:
+          # %stock_player_buy%
           BUY:
-          - '<green>● <white>您的限额: </white>%product_stock_player_buy_amount_left%<white>/</white>%product_stock_player_buy_amount_initial%</green><gray> (<white>%product_stock_player_buy_restock_date%</white>)</gray>'
+          - '<green>● <white>您的限制: </white>%product_stock_player_buy_amount_left%<white>/</white>%product_stock_player_buy_amount_initial%</green><gray> (<white>%product_limits_restock_date%</white>)</gray>'
+          # 当商品配置了购买/出售限制时出现的文本。
+          # 要插入的占位符:
+          # %stock_player_sell%
           SELL:
-          - '<red>● <white>您的限额: </white>%product_stock_player_sell_amount_left%<white>/</white>%product_stock_player_sell_amount_initial%</red><gray> (<white>%product_stock_player_sell_restock_date%</white>)</gray>'
+          - '<red>● <white>您的限制: </white>%product_stock_player_sell_amount_left%<white>/</white>%product_stock_player_sell_amount_initial%</red><gray> (<white>%product_limits_restock_date%</white>)</gray>'
 Transaction_Logs:
   Output:
     File: true
     Console: true
   Format:
-    Date: "dd/MM/yyyy HH:mm:ss"
-    Purchase: '%type%: %player_name% - x%amount% of %item% for %price% in %shop_name% shop.'
+    Date: dd/MM/yyyy HH:mm:ss
+    Purchase: '%type%: %player_name% - x%amount% 个 %item% 以 %price% 在 %shop_name% 商店中.'

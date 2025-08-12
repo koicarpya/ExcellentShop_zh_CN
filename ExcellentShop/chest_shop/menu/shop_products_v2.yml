@@ -1,0 +1,250 @@
+# ==================== [SECTION] 设置 ====================
+# > [MenuType] : String | 菜单类型。可用值：https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : String | 菜单标题
+# > [Auto_Refresh] : Integer | 自动刷新间隔（秒），设为 0 关闭
+# > [PlaceholderAPI -> Enabled] : Boolean | 启用后按玩家解析所有物品的 PlaceholderAPI 变量
+#
+# ==================== [SECTION] 内容 ====================
+# 可自由增删或修改本节中的物品
+# > [Item] : 配置段 | 物品设置
+#     [*] 详见：https://nightexpressdev.com/nightcore/configuration/item-formation/
+# > [Priority] : Integer | 物品优先级，数值高者覆盖同槽位其他物品
+# > [Slots] : 整数列表 | 物品槽位，从 0 开始，用逗号分隔
+#     Slots: '0,4,9,10'
+# > [Type] : String | 定义点击动作
+#     [*] 可用：['close','page_next','page_previous','return','price_advanced','set_currency','add_buy_price','change_buy_price','disable_buying','add_sell_price','change_sell_price','disable_selling','restock_custom','restock_all','withdraw_custom','withdraw_all','remove_item']
+# > [Click_Commands] : 配置段 | 点击时执行指令，支持 PlaceholderAPI
+#     [*] 仅当 [Type] 为空时生效
+#     [*] 支持点击类型：[LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] 使用前缀 'player:' 以玩家身份执行
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+Settings:
+  MenuType: generic_9x6
+  Title: <black>商店商品</black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+
+Product:
+  ItemSlots: 9,18,27
+  HighlightSlots: 10,19,28
+  Icon:
+    FreeSlot:
+      Material: minecraft:lime_dye
+      Display_Name: <green><b>空闲槽位</b></green>
+      Lore:
+      - <gray>在您的物品栏中点击物品</gray>
+      - <gray>即可将其添加到商店。</gray>
+      Hide_Components: true
+    LockedSlot:
+      Material: minecraft:pink_dye
+      Display_Name: <red><b>锁定槽位</b></red>
+      Lore:
+      - <gray>提升您的 <red><u>/rank</u></red></gray>
+      - <gray>以解锁更多槽位。</gray>
+      Hide_Components: true
+    Highlight:
+      Material: minecraft:lime_stained_glass_pane
+      Display_Name: <green>← <b>已选商品</b></green>
+      Lore: []
+      Hide_Components: true
+
+Content:
+  return:
+    Priority: 10
+    Item:
+      Material: minecraft:iron_door
+      Display_Name: <white><u>返回</u></white>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+    Slots: '49'
+    Type: return
+
+  black_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: minecraft:black_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 1,10,19,28,37,45,46,47,48,49,50,51,52,53
+    Type: 'null'
+
+  gray_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: minecraft:gray_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 0,36
+    Type: 'null'
+
+  set_currency:
+    Priority: 10
+    Item:
+      Material: minecraft:emerald
+      Display_Name: <lgreen><b>货币</b></lgreen> <gray>[<white>%product_currency%</white>]</gray>
+      Lore:
+      - <gray>用于销售和购买商品的货币。</gray>
+      - ' '
+      - <lgreen>→ <u>点击更改</u></lgreen>
+    Slots: '23'
+    Type: set_currency
+
+  add_buy_price:
+    Priority: 10
+    Item:
+      Material: minecraft:firework_star
+      Display_Name: <green><b>收购价</b></green> <gray>[<white>未设置</white>]</gray>
+      Lore:
+      - <gray>您尚未设置收购价格。</gray>
+      - ' '
+      - <green>→ <u>点击设置</u></green>
+      Hide_Components: true
+    Slots: '12'
+    Type: add_buy_price
+
+  change_buy_price:
+    Priority: 10
+    Item:
+      Material: minecraft:firework_star
+      Display_Name: <green><b>收购价</b></green> <gray>[<white>%product_price_buy_formatted%</white>]</gray>
+      Lore:
+      - <gray>玩家向您出售 <green>x%product_unit_amount% %product_preview_name%</green> 时，您将支付 <green>%product_price_buy_formatted%</green>。</gray>
+      - ' '
+      - <green>→ <u>点击修改</u></green>
+      Hide_Components: true
+      Color: 0,255,0
+    Slots: '12'
+    Type: change_buy_price
+
+  disable_buying:
+    Priority: 10
+    Item:
+      Material: minecraft:repeater
+      Display_Name: <lyellow><b>关闭收购</b></lyellow>
+      Lore:
+      - <gray>禁止玩家向商店出售此商品。</gray>
+      - ' '
+      - <lyellow>→ <u>点击切换</u></lyellow>
+    Slots: '13'
+    Type: disable_buying
+
+  add_sell_price:
+    Priority: 10
+    Item:
+      Material: minecraft:firework_star
+      Display_Name: <red><b>出售价格</b></red> <gray>[<white>未设置</white>]</gray>
+      Lore:
+      - <gray>您尚未设置出售价格。</gray>
+      - ' '
+      - <red>→ <u>点击设置</u></red>
+      Hide_Components: true
+    Slots: '15'
+    Type: add_sell_price
+
+  change_sell_price:
+    Priority: 10
+    Item:
+      Material: minecraft:firework_star
+      Display_Name: <red><b>出售价格</b></red> <gray>[<white>%product_price_sell_formatted%</white>]</gray>
+      Lore:
+      - <gray>玩家购买 <red>x%product_unit_amount% %product_preview_name%</red> 时，将支付 <red>%product_price_sell_formatted%</red>。</gray>
+      - ' '
+      - <red>→ <u>点击修改</u></red>
+      Hide_Components: true
+      Color: 255,0,0
+    Slots: '15'
+    Type: change_sell_price
+
+  disable_selling:
+    Priority: 10
+    Item:
+      Material: minecraft:repeater
+      Display_Name: <lyellow><b>关闭出售</b></lyellow>
+      Lore:
+      - <gray>禁止玩家购买此商品。</gray>
+      - ' '
+      - <lyellow>→ <u>点击切换</u></lyellow>
+    Slots: '16'
+    Type: disable_selling
+
+  restock_custom:
+    Priority: 10
+    Item:
+      Material: minecraft:light_blue_bundle
+      Display_Name: <lblue><b>补货</b></lblue> <gray>[<white>自定义数量</white>]</gray>
+      Lore:
+      - '<gray><lblue>✔ </lblue>库存: <lblue>%product_amount%</lblue>/<lblue>%product_capacity%</lblue></gray>'
+      - ''
+      - <gray>从背包补充 <lblue>指定数量</lblue></gray>
+      - <gray>的商品。</gray>
+      - ''
+      - <lblue>→ <u>点击补货</u></lblue>
+      Hide_Components: true
+    Slots: '30'
+    Type: restock_custom
+
+  restock_all:
+    Priority: 10
+    Item:
+      Material: minecraft:water_bucket
+      Display_Name: <lblue><b>补货</b></lblue> <gray>[<white>全部</white>]</gray>
+      Lore:
+      - '<gray><lblue>✔ </lblue>库存: <lblue>%product_amount%</lblue>/<lblue>%product_capacity%</lblue></gray>'
+      - ''
+      - <gray>从背包补充 <lblue>全部</lblue> 可补货的商品。</gray>
+      - ''
+      - <lblue>→ <u>点击补货</u></lblue>
+      Hide_Components: true
+    Slots: '31'
+    Type: restock_all
+
+  withdraw_custom:
+    Priority: 10
+    Item:
+      Material: minecraft:orange_bundle
+      Display_Name: <lorange><b>取出</b></lorange> <gray>[<white>自定义数量</white>]</gray>
+      Lore:
+      - '<gray><lorange>✔ </lorange>库存: <lorange>%product_amount%</lorange>/<lorange>%product_space%</lorange></gray>'
+      - ''
+      - <gray>将 <lorange>指定数量</lorange> 的商品</gray>
+      - <gray>直接取回至背包。</gray>
+      - ''
+      - <lorange>→ <u>点击取出</u></lorange>
+      Hide_Components: true
+    Slots: '33'
+    Type: withdraw_custom
+
+  withdraw_all:
+    Priority: 10
+    Item:
+      Material: minecraft:lava_bucket
+      Display_Name: <lorange><b>取出</b></lorange> <gray>[<white>全部</white>]</gray>
+      Lore:
+      - '<gray><lorange>✔ </lorange>库存: <lorange>%product_amount%</lorange>/<lorange>%product_space%</lorange></gray>'
+      - ''
+      - <gray>将 <lorange>所有可取出</lorange> 的商品</gray>
+      - <gray>直接放回背包。</gray>
+      - ''
+      - <lorange>→ <u>点击取出</u></lorange>
+      Hide_Components: true
+    Slots: '34'
+    Type: withdraw_all
+
+  remove_item:
+    Priority: 10
+    Item:
+      Material: minecraft:barrier
+      Display_Name: <lred><b>移除商品</b></lred>
+      Lore:
+      - <gray>从商店永久移除该商品。</gray>
+      - ' '
+      - <lred>→ <u>点击移除</u></lred>
+    Slots: '53'
+    Type: remove_item

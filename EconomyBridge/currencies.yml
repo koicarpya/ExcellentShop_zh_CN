@@ -1,0 +1,31 @@
+Currencies:
+  xp_points:
+    Name: 经验点
+    Format: '%amount% %name%'
+    Icon:
+      Material: EXPERIENCE_BOTTLE
+  xp_level:
+    Name: 经验等级
+    Format: '%amount% %name%'
+    Icon:
+      Material: EXPERIENCE_BOTTLE
+  gold:
+    Name: <lang:"item.minecraft.gold_ingot">
+    Format: '%amount% %name%'
+    Icon:
+      Material: GOLD_INGOT
+  diamond:
+    Name: <lang:"item.minecraft.diamond">
+    Format: '%amount% %name%'
+    Icon:
+      Material: DIAMOND
+  emerald:
+    Name: <lang:"item.minecraft.emerald">
+    Format: '%amount% %name%'
+    Icon:
+      Material: EMERALD
+  vault:
+    Name: 金币
+    Format: $%amount%
+    Icon:
+      Material: GOLD_NUGGET

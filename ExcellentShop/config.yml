@@ -1,128 +1,97 @@
-Plugin:
-  # 本地化的插件名称。它用于消息和内部占位符。
-  Name: 商店
-  # 插件前缀。用于消息。
-  Prefix: <lyellow><b>商店</b></lyellow><dgray> » </dgray><gray>
-  # 将注册为主插件命令的命令名称。
-  # 不要留空。用逗号分隔多个名称。
-  Command_Aliases: eshop,excellentshop
-  # 设置插件语言。
-  # 基本上它告诉插件使用'/lang/'子文件夹中的某些消息配置。
-  # 如果指定的语言不可用，将使用默认语言（英语）。
-  # [默认是系统区域设置]
-  Language: cn
-Database:
-  # 设置数据库类型。
-  # 可用值：MYSQL,SQLITE
-  Type: SQLITE
-  # 设置在线玩家的插件数据将保存到数据库的频率（以分钟为单位）。
-  # 设置为'-1'以禁用。
-  Auto_Save_Interval: 20
-  # 设置插件数据将从远程数据库获取和加载的频率（以秒为单位）。
-  # 对于SQLITE无用。
-  # 设置为'-1'以禁用。
-  Sync_Interval: -1
-  # 数据库中插件表的自定义前缀。
-  Table_Prefix: excellentshop
-  MySQL:
-    # 数据库用户名。
-    Username: root
-    # 数据库密码。
-    Password: root
-    # 数据库主机。示例：localhost:3306, 127.0.0.1:3306
-    Host: localhost:3306
-    # 插件将创建表的MySQL数据库名称。
-    Database: minecraft
-    # 连接选项。除非您知道您在做什么，否则不要触摸。
-    Options: ?allowPublicKeyRetrieval=true&useSSL=false
-  SQLite:
-    # SQLite数据库文件的文件名。
-    # 实际上它是文件的路径，所以您可以在这里使用目录。
-    FileName: data.db
-  Purge:
-    # 启用清除功能。
-    # 清除将删除插件表中所有“旧”的记录。
-    Enabled: false
-    # 设置数据库记录在被清除之前的最长时间。
-    # 这个选项可能根据插件有不同的行为。
-    # 默认情况下，它是插件用户的不活动时间天数。
-    For_Period: 60
-  UserData:
-    # 设置插件尝试保存标记为待保存的用户数据的频率（以刻为单位）。
-    # 这将只保存“准备”保存的用户（见'Scheduled_Save_Delay'）。
-    # [在任何情况下都不要禁用!]
-    # [20刻 = 1秒]
-    # [默认是20]
-    Scheduled_Save_Interval: 20
-    # 设置用户被标记为保存时的计划保存延迟（以秒为单位）。
-    # 这意味着用户将在被标记后X秒保存。
-    # 通常，您应该保持这个值小于'Scheduled_Save_Interval'以获得最佳结果，
-    # 并且不要将其设置得非常高，否则可能会导致用户数据从未保存和同步。
-    #
-    # 重要说明 #1：当用户被标记为保存时，这将阻止他们同步直到保存发生！
-    # 重要说明 #2：每次用户被标记为保存时，他们的保存时间将用这个值更新！
-    #
-    # 当用户的数据以某种方式被更改/影响时，用户被标记为保存。
-    # 然而这高度依赖于插件。
-    # [默认是1]
-    Scheduled_Save_Delay: 1
-    # 设置在用户被标记为保存并保存后，插件可以继续同步数据之前的同步延迟（以秒为单位）。
-    # 当一个用户被标记为保存并保存后，他们的同步将被解锁但延迟这个值。
-    # 这可能有助于防止在用户数据完全保存之前同步过程访问数据库时可能出现的问题。
-    # [默认是3]
-    Scheduled_Save_Sync_Pause: 3
 General:
   DateFormat: MM/dd/yyyy HH:mm
-  # 设置插件将检查商店可能的“更新”的频率（以秒为单位），例如：
-  # - 旋转商店的轮换时间。
+  # 控制玩家是否需要拥有 'excellentshop.currency.[name]' 权限才能使用特定货币开设商店或上架商品。
+  # [*] 仅对 ChestShop 和 Auction 模块有效。
+  # [*] 设置为默认的货币始终允许使用。
+  Currency_Need_Permission: false
+  # 设置插件检查商店“更新”的频率（单位：秒），例如：
+  # - 轮换商店的轮换时间。
   # - 静态商店的可用折扣。
-  # - 虚拟和静态商店的浮动价格更新时间。
-  # 除非您知道您在做什么和为什么，否则不要触摸。
-  # [默认是60秒]
+  # - 虚拟商店和静态商店浮动价格的更新时间。
+  # 除非您知道自己在做什么，否则不要修改。
+  # [默认值为 60 秒]
   Shop_Update_Interval: 60
-  # 插件加载时不会注册的商品处理程序列表。
-  Disabled_Product_Handlers: []
-  # 设置玩家是否可以在库存已满时从商店购买物品。
+  # 设置当玩家背包已满时是否可以继续购买商品。
   Buy_With_Full_Inventory: false
-  # 设置在出售/购买物品后是否应该关闭商店GUI。
+  # 设置当玩家完成交易后是否关闭商店 GUI。
   Close_GUI_After_Trade: false
-Modules:
-  VirtualShop:
-    # 设置是否启用虚拟商店模块。
-    Enabled: true
-    # 虚拟商店模块的命令别名（名称）。用逗号分隔。
-    # [*] 应用更改需要重启服务器。
-    Command_Aliases: vshop
-  ChestShop:
-    # 设置是否启用箱子商店模块。
-    Enabled: true
-    # 箱子商店模块的命令别名（名称）。用逗号分隔。
-    # [*] 应用更改需要重启服务器。
-    Command_Aliases: chestshop,cshop,cs
-  Auction:
-    # 设置是否启用拍卖模块。
-    Enabled: true
-    # 拍卖模块的命令别名（名称）。用逗号分隔。
-    # [*] 应用更改需要重启服务器。
-    Command_Aliases: auction,auc,ah
-Data:
-  Products:
-    # 设置插件是否会从数据库中清理不再存在的商店或商品的数据（价格、库存和玩家限制）。
-    # 如果您在所有服务器上使用相同的商店配置，建议启用。
-    # [*] 如果您有多个服务器并且有不同的商店配置，不要启用。
-    CleanUp: false
-    # 设置修改后的商品数据（如价格、库存和玩家限制值）将保存到数据库的频率（以秒为单位）。
-    # [*] 如果您使用浮动/动态价格和全局/玩家库存功能，不要禁用。
-    SaveInterval: 5
 GUI:
-  # 设置是否在商店GUI中的非商品项上应用PlaceholderAPI占位符。
+  # [已过时。GUI 文件中已有专门的 PlaceholderAPI 设置]
   Use_PlaceholderAPI: false
-  # 设置商店GUI中指定点击商品的动作。
+  # 设置在商店 GUI 中对商品点击的操作。
   # 允许的点击类型：https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/ClickType.html
-  # 允许的值：BUY_SELECTION, SELL_SELECTION, SELL_ALL, BUY_SINGLE, SELL_SINGLE
+  # 允许的值：BUY_SELECTION, SELL_SELECTION, SELL_ALL, BUY_SINGLE, SELL_SINGLE, PURCHASE_OPTION, UNDEFINED
   Click_Types:
-    SHIFT_LEFT: BUY_SINGLE
     SHIFT_RIGHT: SELL_SINGLE
-    LEFT: BUY_SELECTION
     RIGHT: SELL_SELECTION
     SWAP_OFFHAND: SELL_ALL
+    SHIFT_LEFT: BUY_SINGLE
+    LEFT: BUY_SELECTION
+Data:
+  # 设置修改后的商品和商店数据保存到数据库的频率（单位：秒）。
+  # 包括以下数据：
+  # - 商品价格数据（浮动、动态）。
+  # - 商品库存数据（全局、玩家）。
+  # - 商店轮换数据。
+  # [*] 服务器重启或插件重载时也会保存数据。
+  # [*] 如果您使用 SQLite 或不关心多服务器同步，可以禁用此功能。
+  SaveInterval: 5
+  PriceTable: price_data
+  StocksTable: stocks
+  RotationsTable: rotations
+# 模块设置。
+Module:
+  auction:
+    # 控制模块是否启用。
+    Enabled: true
+    # 创建模块专用命令及其别名。
+    # [*] 需要重启服务器才能生效。
+    Command_Aliases: auction,auc,ah
+    # 设置模块消息的前缀。
+    Prefix: 拍卖
+    Currency:
+      # 设置模块的默认货币。
+      # 可用货币列表：https://nightexpressdev.com/excellentshop/features/multi-currency
+      Default: vault
+      # 设置模块启用的货币。
+      # 使用 '*' 表示启用所有可用货币。
+      # 可用货币列表：https://nightexpressdev.com/excellentshop/features/multi-currency
+      # [*] 默认货币始终启用。
+      Enabled:
+      - '*'
+  chest_shop:
+    # 控制模块是否启用。
+    Enabled: true
+    # 创建模块专用命令及其别名。
+    # [*] 需要重启服务器才能生效。
+    Command_Aliases: chestshop,cshop,playershop,pshop
+    # 设置模块消息的前缀。
+    Prefix: 玩家商店
+    Currency:
+      # 设置模块的默认货币。
+      # 可用货币列表：https://nightexpressdev.com/excellentshop/features/multi-currency
+      Default: vault
+      # 设置模块启用的货币。
+      # 使用 '*' 表示启用所有可用货币。
+      # 可用货币列表：https://nightexpressdev.com/excellentshop/features/multi-currency
+      # [*] 默认货币始终启用。
+      Enabled:
+      - '*'
+  virtual_shop:
+    # 控制模块是否启用。
+    Enabled: true
+    # 创建模块专用命令及其别名。
+    # [*] 需要重启服务器才能生效。
+    Command_Aliases: virtualshop,vshop
+    # 设置模块消息的前缀。
+    Prefix: 商店
+    Currency:
+      # 设置模块的默认货币。
+      # 可用货币列表：https://nightexpressdev.com/excellentshop/features/multi-currency
+      Default: vault
+      # 设置模块启用的货币。
+      # 使用 '*' 表示启用所有可用货币。
+      # 可用货币列表：https://nightexpressdev.com/excellentshop/features/multi-currency
+      # [*] 默认货币始终启用。
+      Enabled:
+      - '*'

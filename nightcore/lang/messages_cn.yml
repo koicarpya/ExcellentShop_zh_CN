@@ -1,29 +1,29 @@
 Command:
   Help:
     List:
-      - <noprefix>
-      - "&b%name% &8- &7命令:"
-      - " "
-      - "&c<> &8- &7必需 &8| &a[] &8- &7可选"
-      - " "
-      - "%entry%"
-      - " "
-    Entry: "  &d/%command_label% %command_usage% &8- &7%command_description%"
+    - <noprefix>
+    - '&b%name% &8- &7命令列表:'
+    - ' '
+    - '&c<> &8- &7必填 &8| &a[] &8- &7可选'
+    - ' '
+    - '%entry%'
+    - ' '
+    Entry: '  &d/%command_label% %command_usage% &8- &7%command_description%'
     Desc: 显示帮助页面
   CheckPerm:
     Desc: 打印玩家权限信息
     Usage: <player>
   Reload:
     Desc: 重新加载插件
-    Done: "&7插件 &a已重新加载!"
+    Done: '&7插件 &a已重新加载!'
   Argument:
     Type:
-      Required: "&c<%name%>"
-      Optional: "&e[%name%]"
+      Required: '&c<%name%>'
+      Optional: '&e[%name%]'
     Name:
       Generic: 值
       Type: 类型
-      Name: 名字
+      Name: 名称
       Player: 玩家
       World: 世界
       Amount: 数量
@@ -32,80 +32,122 @@ Command:
       BlockMaterial: 方块类型
       Enchantment: 附魔
   Flag:
-    Format: "&7[%name%]"
+    Format: '&7[%name%]'
+  DumpItem:
+    Desc: 打印物品组件信息
 Time:
-  Day: "%amount%天"
-  Hour: "%amount%小时"
-  Min: "%amount%分钟"
-  Sec: "%amount%秒"
-  Delimiter: " "
+  Day: '%amount%天'
+  Hour: '%amount%小时'
+  Min: '%amount%分钟'
+  Sec: '%amount%秒'
+  Delimiter: ' '
 Other:
-  "Yes": "&a是"
-  "No": "&c否"
-  Enabled: "&a已启用"
-  Disabled: "&c已禁用"
-  Any: 任何
+  'Yes': '&a是'
+  'No': '&c否'
+  Enabled: '&a已启用'
+  Disabled: '&c已禁用'
+  Any: 任意
   None: 无
   Never: 从不
-  OneTimed: 一次性的
-  Unlimited: 无限的
+  OneTimed: 一次性
+  Unlimited: 无限
   Infinity: ∞
 Error:
-  Invalid_Player: "&c找不到玩家"
-  Invalid_World: "&c无效的世界"
-  Invalid_Number: "&e%value% &c不是一个有效的数字"
-  NoPermission: "&c你没有权限这样做!"
+  Invalid_Player: '&c找不到玩家'
+  Invalid_World: '&c无效的世界'
+  Invalid_Number: '&e%value% &c不是有效的数字'
+  NoPermission: '&c您没有权限这么做!'
   Command:
-    NotYourself: "&c此命令不能用于你自己。"
-    PlayerOnly: "&c此命令仅适用于玩家。"
+    NotYourself: '&c不能对自己使用此命令'
+    PlayerOnly: '&c此命令仅限玩家使用'
     Usage:
-      - <noprefix>
-      - "&c错误: &7错误的参数!"
-      - "&c用法: &d/%command_label% %command_usage%"
-      - " "
-    ParseFlag: "&c无效的值 &e%value% &7对应标志 &d%name%"
-    ParseArgument: "&c无效的值 &e%value% &7对应参数 &d%name%"
+    - <noprefix>
+    - '&c错误: &7参数错误!'
+    - '&c用法: &d/%command_label% %command_usage%'
+    - ' '
+    ParseFlag: '&c标志 %name% 的值 &e%value% &c无效'
+    ParseArgument: '&c参数 %name% 的值 &e%value% &c无效'
     Argument:
-      InvalidPlayer: "&c找不到玩家 &a%value%！"
-      InvalidWorld: "&c找不到世界 &b%value%！"
-      InvalidNumber: "&e%value% &c不是一个有效的数字！"
-      InvalidMaterial: "&b%value% &c不是一个有效的材料！"
-      InvalidEnchantment: "&b%value% &c不是一个有效的附魔！"
-  InvalidMaterial: "&c无效的材料！"
-  InvalidEnchantment: "&c无效的附魔！"
+      InvalidPlayer: '&c找不到玩家 &a%value%！'
+      InvalidWorld: '&c找不到世界 &b%value%！'
+      InvalidNumber: '&e%value% &c不是有效的数字！'
+      InvalidMaterial: '&b%value% &c不是有效的材料！'
+      InvalidEnchantment: '&b%value% &c不是有效的附魔！'
+  InvalidMaterial: '&c无效的材料！'
+  InvalidEnchantment: '&c无效的附魔！'
 Editor:
   Action:
     Exit:
-      - <noprefix>
-      - "&7点击 <click:run_command:'/#exit'><hover:show_text:'&7点击以取消'>&a[这里]</hover></click> &7以退出输入模式"
-      - " "
+    - <noprefix>
+    - '&7点击 <click:run_command:''/#exit''><hover:show_text:''&7点击取消''>&a[这里]</hover></click> &7退出输入模式'
+    - ' '
   Input:
     Header:
-      Main: "&a输入模式"
-      Error: "&c错误"
+      Main: '&a输入模式'
+      Error: '&c错误'
     Error:
-      NotInteger: "&7期望 &c整数 数字!"
-      Generic: "&7无效的值!"
+      NotInteger: '&7需要 &c整数！'
+      Generic: '&7无效的值！'
   Generic:
     Close:
-      Name: "&c退出"
+      Name: '&c关闭'
       Lore: []
     Return:
-      Name: "&7返回"
+      Name: '&7返回'
       Lore: []
     NextPage:
-      Name: "&7下一页"
+      Name: '&7下一页'
       Lore: []
     PreviousPage:
-      Name: "&7上一页"
+      Name: '&7上一页'
       Lore: []
+  Button:
+    Name: <lyellow><b>%name%</b></lyellow>
+    Description: <gray>%entry%</gray>
+    Current:
+      DefaultName: 当前
+      Info: '<lyellow>➥ <gray>%name%：</gray>%value%</lyellow>'
+    ClickKey: <lyellow>→ <u>%name% 更改为 %value%</u></lyellow>
+  Item:
+    Exit:
+      Name: <lred><u>退出</u></lred>
+      Description: []
+      Formatted: false
+    Return:
+      Name: <white><u>返回</u></white>
+      Description: []
+      Formatted: false
+    NextPage:
+      Name: <lyellow><u>下一页</u> →</lyellow>
+      Description: []
+      Formatted: false
+    PreviousPage:
+      Name: <lyellow>← <u>上一页</u></lyellow>
+      Description: []
+      Formatted: false
 Number:
   Thousand: 千
   Million: 百万
   Billion: 十亿
   Trillion: 万亿
-  Quadrillion: 亿亿
+  Quadrillion: 千万亿
 Entry:
-  Good: "&a✔ &7%entry%"
-  Bad: "&c✘ &7%entry%"
-  Warn: "&7[&6!&7] &7%entry%"
+  Good: '&a✔ &7%entry%'
+  Bad: '&c✘ &7%entry%'
+  Warn: '&7[&6!&7] &7%entry%'
+ClickKey:
+  LEFT: 左键
+  RIGHT: 右键
+  SHIFT_LEFT: Shift+左键
+  SHIFT_RIGHT: Shift+右键
+  DROP_KEY: 丢弃 [Q]
+  SWAP_KEY: 交换 [F]
+  DRAG_N_DROP: 拖拽
+Dialog:
+  Header: <lyellow>%time%</lyellow>
+  DefaultPrompt: <lgray>输入 <lgreen>[值]</lgreen></lgray>
+  Info:
+    Exit:
+    - <noprefix>
+    - ''
+    - <gray>点击 <click:run_command:"/#exit"><hover:show_text:"<gray>点击取消</gray>"><green>[这里]</green></hover></click> 退出输入模式</gray>
